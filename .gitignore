@@ -1,3 +1,7 @@
 src/helpers/*
 all_sales_incl_ing.xlsm
 venv/*
+combined_data.xlsx
+src/run_all_manual.py
+src/backorders/*
+src/**/*.log
