@@ -9,7 +9,7 @@ This system combines sales data from Ingram and SAGE databases to create detaile
 ## Key Features
 
 - Processes sales data from both Ingram and SAGE sources
-- Handles customer data with clear source identification (appends "(INGRAM)" to Ingram customer names)
+- Handles customer data with advanced name mapping system using master mapping tables
 - Advanced mapping system for customer names and sales categories
 - Monthly sales upload functionality with automatic categorization
 - Generates comprehensive sales reports including:
@@ -67,7 +67,7 @@ This system combines sales data from Ingram and SAGE databases to create detaile
 - **Book Title Mapping**: Standardizes book titles using ISBN-based mapping
 
 ### 2. Data Processing
-- Appends "(INGRAM)" to Ingram customer names for clear source identification
+- Maps Ingram customer names to SAGE customer names using master mapping tables
 - Standardizes ISBN formats
 - Combines data from both sources with proper categorization
 - Groups and aggregates sales data by standardized categories
@@ -128,7 +128,7 @@ The system generates Excel reports containing:
 
 ## System Notes
 
-- The system uses a sophisticated mapping approach to handle customer data consistency
+- The system uses master mapping tables to standardize customer names between Ingram and SAGE sources
 - Data is aggregated to remove duplicates while maintaining source identification
 - Reports are generated on a monthly basis with automatic categorization
 - Historical data is maintained for 3 years with proper mapping applied
