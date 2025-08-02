@@ -5,3 +5,4 @@ combined_data.xlsx
 src/run_all_manual.py
 src/backorders/*
 src/**/*.log
+combined_sales_report_procedure.sql

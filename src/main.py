@@ -35,6 +35,8 @@ SAGE_CUST_CODES = PATHS["SAGE_CUST_CODES"]
 JSON_CUST_CODES = PATHS["JSON_CUST_CODES"]
 EXPORT_XL = PATHS["ALL_SALES_INCL_ING"] 
 DB_PATH = PATHS["DB_PATH"]
+ING_QUERY = PATHS["ING_QUERY"]
+SAGE_QUERY = PATHS["SAGE_QUERY"]
 
 params = urllib.parse.quote_plus(SSMS_CONN_STRING)
 engine = sqlalchemy.create_engine(f"mssql+pyodbc:///?odbc_connect={params}",connect_args={'timeout':1800,'connect_timeout':120},pool_recycle=3600)
@@ -58,48 +60,7 @@ def main():
     ISBN    YEAR    MONTH   TITLE   NAMECUST    NETUNITS    NETAMT
     """
 
-    ingram_sales_df = pl.from_pandas(pd.read_sql(
-        """
-        DECLARE @curr_month_year VARCHAR(6);
-        DECLARE @start_year VARCHAR(4);
-
-        SET @curr_month_year = FORMAT(GETDATE(),'yyyyMM')
-        SET @start_year = FORMAT(DATEADD(YEAR,-3,GETDATE()),'yyyy')
-
-        SELECT 
-            TRIM(ING_SALES.ISBN) as ISBN,
-            ING_SALES.YEAR,
-            ING_SALES.MONTH,
-            TRIM(ING_SALES.TITLE) as TITLE,
-            COALESCE(TRIM(NAME_MAP.MAPPED_SAGE_NAME), TRIM(ING_SALES.NAMECUST)) as NAMECUST,
-            ING_SALES.NETUNITS,
-            ING_SALES.NETAMT,
-            TRIM(ING_CAT.[MASTER SALES CATEGORY]) as TUTTLE_SALES_CATEGORY
-        FROM
-            TUTLIV.dbo.ING_SALES as ING_SALES 
-            LEFT JOIN (
-                SELECT DISTINCT 
-                    TRIM([SL Account Number]) as [SL Account Number],
-                    TRIM([HQ Account Number]) as [HQ Account Number],
-                    TRIM([MASTER SALES CATEGORY]) as [MASTER SALES CATEGORY]
-                FROM TUTLIV.dbo.INGRAM_MASTER_CATEGORIES
-            ) ING_CAT
-                ON TRIM(ING_SALES.[SL Account Number]) = ING_CAT.[SL Account Number]
-                AND TRIM(ING_SALES.[HQ Account Number]) = ING_CAT.[HQ Account Number]
-            LEFT JOIN (
-                SELECT DISTINCT 
-                    TRIM(INGRAM_NAME) as INGRAM_NAME,
-                    TRIM(MAPPED_SAGE_NAME) as MAPPED_SAGE_NAME
-                FROM TUTLIV.dbo.MASTER_INGRAM_NAME_MAPPING
-            ) NAME_MAP 
-                ON TRIM(ING_SALES.NAMECUST) = NAME_MAP.INGRAM_NAME
-        WHERE 
-            (ING_SALES.YEAR * 100 + ING_SALES.MONTH) <> @curr_month_year AND
-            ING_SALES.YEAR >= @start_year AND
-            TRIM(ING_SALES.[IPS Sale]) = 'N' AND
-            (SUBSTRING(TRIM(ING_SALES.ISBN),1,6) <> '978146'
-            AND SUBSTRING(TRIM(ING_SALES.ISBN),1,6) <> '978195')
-        """, engine))
+    ingram_sales_df = pl.from_pandas(pd.read_sql(ING_QUERY, engine))
 
     """
     Next, grab all SAGE Sales data for the last 3 years not including current month, also include no sales where namecust LIKE 'INGRAM BOOK CO.'
@@ -108,37 +69,7 @@ def main():
     NETAMT    NETUNITS     NEWBILLTO    ISBN    YEAR    MONTH   TITLE   NAMECUST    IDACCTSET 
     """
 
-    sage_sales_df = pl.from_pandas(pd.read_sql(
-        """
-        DECLARE @curr_month_year Varchar(6);
-        DECLARE @start_year Varchar(4);
-
-        SET @curr_month_year = FORMAT(GETDATE(),'yyyyMM')
-        SET @start_year = FORMAT(DATEADD(YEAR,-3,GETDATE()),'yyyy')
-
-        SELECT
-            TRIM(SAGE_HSA.ISBN) as ISBN,
-            SAGE_HSA.YEAR,
-            SAGE_HSA.MONTH,
-            TRIM(SAGE_HSA.TITLE) as TITLE,
-            TRIM(SAGE_HSA.NAMECUST) as NAMECUST,
-            SAGE_HSA.NETUNITS,
-            SAGE_HSA.NETAMT,
-            TRIM(SAGE_CAT.TUTTLE_SALES_CATEGORY) as TUTTLE_SALES_CATEGORY
-        FROM
-            TUTLIV.dbo.ALL_HSA_MKSEG as SAGE_HSA
-            LEFT JOIN (
-                SELECT DISTINCT 
-                    TRIM(IDCUST) as IDCUST,
-                    TRIM(TUTTLE_SALES_CATEGORY) as TUTTLE_SALES_CATEGORY
-                FROM TUTLIV.dbo.SAGE_MASTER_CATEGORIES
-            ) SAGE_CAT
-                ON TRIM(SAGE_CAT.IDCUST) = TRIM(SAGE_HSA.NEWBILLTO)
-        WHERE
-            (SAGE_HSA.YEAR * 100 + SAGE_HSA.MONTH) <> @curr_month_year AND
-            SAGE_HSA.YEAR >= @start_year AND
-            TRIM(SAGE_HSA.NAMECUST) NOT LIKE '%ingram book co.%'
-        """ , engine))
+    sage_sales_df = pl.from_pandas(pd.read_sql(SAGE_QUERY, engine))
     
     """
     WE DONT NEED THIS ANYMORE AFTER MAPPING TABLES
