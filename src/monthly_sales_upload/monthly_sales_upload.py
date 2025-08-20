@@ -20,7 +20,6 @@ params = urllib.parse.quote_plus(SSMS_CONN_STRING)
 engine = sqlalchemy.create_engine(f"mssql+pyodbc:///?odbc_connect={params}",connect_args={'timeout':1800,'connect_timeout':120},pool_recycle=3600)
 
 logging.basicConfig(
-    filename="monthly_upload.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
@@ -30,13 +29,14 @@ logging.basicConfig(
 
 
 try:
-    monthly_sales_df = pd.read_excel(MONTHLY_ING_SALES, sheet_name='Sheet1')
+    monthly_sales_df = pd.read_excel(MONTHLY_ING_SALES, sheet_name='Sheet1',dtype={'SL Account Number': str, 'HQ Account Number': str, 'EAN': str})
     """
     Remove this filtering because we want to include all ingram sales
     #Only sales where IPS_Sale = 'N'
     monthly_sales_df = monthly_sales_df[monthly_sales_df['IPS_Sale'] == 'N']
     logging.info(f"Loaded {len(monthly_sales_df)} monthly sales records")
     """
+    logging.info(f"columns in monthly sales: {monthly_sales_df.columns.tolist()}")
 except Exception as e:
     logging.error(f"Failed to read monthly sales file: {e}")
     sys.exit(1)
@@ -55,16 +55,15 @@ except Exception as e:
 
 logging.info('Mapping master sales categories to TUTTLE SALES CATEGORY')
 
-monthly_sales_df['SL Account Number'] = monthly_sales_df['SL Account Number'].astype(str).str.zfill(9)
 ingram_master_sales_categories['SL Account Number'] = ingram_master_sales_categories['SL Account Number'].astype(str)
+ingram_master_sales_categories['HQ Account Number'] = ingram_master_sales_categories['HQ Account Number'].astype(str)
 
-monthly_sales_df = monthly_sales_df.merge(ingram_master_sales_categories, how='left', on='SL Account Number')
+monthly_sales_df = monthly_sales_df.merge(ingram_master_sales_categories, how='left', on=['SL Account Number','HQ Account Number'])
 
 logging.info('filling title nulls')
 monthly_sales_df = monthly_sales_df.merge(book_mapping, left_on='EAN', right_on='ISBN', how='left')
 monthly_sales_df['Title'] = monthly_sales_df['Title'].fillna(monthly_sales_df['TITLE_Itemflat'])
-monthly_sales_df = monthly_sales_df.drop(columns=['TITLE_Itemflat'])
-
+monthly_sales_df = monthly_sales_df.drop(columns=['TITLE_Itemflat', 'ISBN'])
 logging.info('removing extra spaces')
 for column in monthly_sales_df.select_dtypes(include='object').columns:
     monthly_sales_df[column] = monthly_sales_df[column].str.strip()
@@ -99,19 +98,18 @@ monthly_sales_df = monthly_sales_df.rename(columns={
 })
 
 # Remove 'TUTTLE SALES CATEGORY' from output columns and groupby
-output_columns = ['NETUNITS','NETAMT', 'ISBN', 'YEAR', 'MONTH', 'TITLE', 'NAMECUST','SL Class of Trade','IPS Sale']
+output_columns = ['NETUNITS','NETAMT', 'ISBN', 'YEAR', 'MONTH', 'TITLE', 'NAMECUST','SL Class of Trade','IPS Sale','HQ Account Number','SL Account Number']
 monthly_sales_df = monthly_sales_df[output_columns]
 
 monthly_sales_df['NETUNITS'] = monthly_sales_df['NETUNITS'].fillna(0)
 monthly_sales_df['NETAMT'] = monthly_sales_df['NETAMT'].fillna(0)
 monthly_sales_df['NETUNITS'] = monthly_sales_df['NETUNITS'].round().astype(int)
-
-def clean_isbn(isbn):
-    if pd.isna(isbn):
-        return None
-    return str(isbn).replace('.0', '').replace('.', '').replace('E+', '').replace('e+', '')
-
-monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].apply(clean_isbn)
+monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].astype(str)
+monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('.0', '', regex=False)
+monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('.', '', regex=False)
+monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('E+', '', regex=False)
+monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('e+', '', regex=False)
+monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].replace('nan', None)
 
 invalid_isbns = monthly_sales_df[monthly_sales_df['ISBN'].str.len() != 13]
 if not invalid_isbns.empty:
@@ -123,7 +121,7 @@ netamt_before = monthly_sales_df['NETAMT'].sum()
 logging.info(f"Total NETUNITS before: {netunits_before}")
 logging.info(f"Total NETAMT before: {netamt_before}")
 
-grouped = monthly_sales_df.groupby(['ISBN','YEAR','MONTH','TITLE','NAMECUST','IPS Sale']).agg({
+grouped = monthly_sales_df.groupby(['ISBN','YEAR','MONTH','TITLE','NAMECUST','IPS Sale','HQ Account Number','SL Account Number']).agg({
     'NETUNITS':'sum',
     'NETAMT':'sum',
     'SL Class of Trade':'first'
