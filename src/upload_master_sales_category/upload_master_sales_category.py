@@ -62,7 +62,7 @@ def main():
         last_row = ws.range('A1').end('down').row
         logging.info("Loading SAGE categories")
         sage_master_categories : pd.DataFrame = ws.range(f"A1:D{last_row}").options(pd.DataFrame,header = True,index = False).value
-        sage_master_categories['IDCUST'] = sage_master_categories['IDCUST'].astype(str).str.replace('.0$', '', regex=True)
+        sage_master_categories['IDCUST'] = sage_master_categories['IDCUST'].astype(str)
         logging.info("Successfully loaded SAGE categories")
     except Exception as e:
         logging.error(f"Failed to load SAGE categories {e}")

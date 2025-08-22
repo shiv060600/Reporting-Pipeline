@@ -338,14 +338,14 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
     logger.info(f"Rows after final groupby: {len(report_df)}")
     
     # Store post-groupby totals for validation
-    post_groupby_ytd_units = report_df['YTD_UNITS'].sum() if 'YTD_UNITS' in report_df.columns 0 
+    post_groupby_ytd_units = report_df['YTD_UNITS'].sum() if 'YTD_UNITS' in report_df.columns else 0
     post_groupby_ytd_dollars = report_df['YTD_DOLLARS'].sum() if 'YTD_DOLLARS' in report_df.columns else 0
     post_groupby_12m_units = report_df['12M_UNITS'].sum() if '12M_UNITS' in report_df.columns else 0 
     post_groupby_12m_dollars = report_df['12M_DOLLARS'].sum() if '12M_DOLLARS' in report_df.columns else 0
 
     #Log differences
-    logger.info(f"YTD Diff - Units: {(pre_groupby_ytd_units - post_groupby_ytd_units):,.2f} | Dollars {(pre_groupby_ytd_dollars - post_groupby_ytd_dollars):,.2f}")
-    logger.info(f"12MRoll Diff - Units: {(pre_groupby_12m_units - post_groupby_12m_units):,.2} | Dollars {(pre_groupby_12m_dollars - post_groupby_12m_dollars):,.2f}")
+    logger.info(f"YTD Diff - Units: {(pre_groupby_ytd_units - post_groupby_ytd_units)} | Dollars {(pre_groupby_ytd_dollars - post_groupby_ytd_dollars):,.2f}")
+    logger.info(f"12MRoll Diff - Units: {(pre_groupby_12m_units - post_groupby_12m_units)} | Dollars {(pre_groupby_12m_dollars - post_groupby_12m_dollars):,.2f}")
 
     # Order columns for final output
     actual_monthly_cols_sorted = sorted([col for col in report_df.columns if col.startswith('NET_UNITS_')], 
@@ -489,9 +489,9 @@ if __name__ == "__main__":
     logger.info("Starting generation of COMBINED_SALES_REPORT")
     combined_sales_report(ingram_sales_df=ingram_sales_df,sage_sales_df=sage_sales_df)
     logger.info("Finished combining data and reporting logic for COMBINED_SALES_REPORT")
-    logger.info("Starting REPORT_THREE_COMBINED")
-    report_three_combined(ingram_sales_df=ingram_sales_df,sage_sales_df=sage_sales_df)
-    logger.info("Finished REPORT_THREE_COMBINED")
+    #logger.info("Starting REPORT_THREE_COMBINED")
+    #report_three_combined(ingram_sales_df=ingram_sales_df,sage_sales_df=sage_sales_df)
+    #logger.info("Finished REPORT_THREE_COMBINED")
     logger.info("Program has finished")
     time.sleep(3)
     sys.exit(0)
