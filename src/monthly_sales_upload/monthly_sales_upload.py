@@ -105,11 +105,7 @@ monthly_sales_df['NETUNITS'] = monthly_sales_df['NETUNITS'].fillna(0)
 monthly_sales_df['NETAMT'] = monthly_sales_df['NETAMT'].fillna(0)
 monthly_sales_df['NETUNITS'] = monthly_sales_df['NETUNITS'].round().astype(int)
 monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].astype(str)
-monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('.0', '', regex=False)
-monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('.', '', regex=False)
-monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('E+', '', regex=False)
-monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].str.replace('e+', '', regex=False)
-monthly_sales_df['ISBN'] = monthly_sales_df['ISBN'].replace('nan', None)
+
 
 invalid_isbns = monthly_sales_df[monthly_sales_df['ISBN'].str.len() != 13]
 if not invalid_isbns.empty:
