@@ -627,8 +627,8 @@ if __name__ == "__main__":
     """
     target_calculations_df = pl.from_pandas(pd.read_excel(TARGET_CALCULATIONS_FILE,dtype = {'BILLTO':str}) )
 
-    #logger.info("Starting generation of COMBINED_SALES_REPORT")
-    #combined_sales_report(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df)
+    logger.info("Starting generation of COMBINED_SALES_REPORT")
+    combined_sales_report(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df)
     logger.info("Finished combining data and reporting logic for COMBINED_SALES_REPORT")
     logger.info("Starting REPORT_THREE_COMBINED")
     report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df)

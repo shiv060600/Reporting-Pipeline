@@ -33,7 +33,7 @@ def main():
         
         logging.info("Reading data from Excel sheet")
         last_row = ws.range('A1').end('down').row
-        ingram_master_sales_categories: pd.DataFrame = ws.range(f'A1:E{last_row}').options(pd.DataFrame, header=True, index = False).value
+        ingram_master_sales_categories: pd.DataFrame = ws.range(f'A1:E{last_row}').options(pd.DataFrame, header=True, index=False, dtype=str).value
         
         logging.info(f"Successfully loaded {len(ingram_master_sales_categories)} rows from Excel")
         
@@ -61,8 +61,8 @@ def main():
         ws = wb.sheets['SAGE_CUSTOMERS']
         last_row = ws.range('A1').end('down').row
         logging.info("Loading SAGE categories")
-        sage_master_categories : pd.DataFrame = ws.range(f"A1:D{last_row}").options(pd.DataFrame,header = True,index = False).value
-        sage_master_categories['IDCUST'] = sage_master_categories['IDCUST'].astype(str)
+        sage_master_categories : pd.DataFrame = ws.range(f"A1:D{last_row}").options(pd.DataFrame, header=True, index=False, dtype=str).value
+            
         logging.info("Successfully loaded SAGE categories")
     except Exception as e:
         logging.error(f"Failed to load SAGE categories {e}")
