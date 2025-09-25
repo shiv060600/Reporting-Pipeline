@@ -17,7 +17,7 @@ logging.basicConfig(
     level=logging.INFO,
     handlers=[
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler('ingram_only_pipeline.log',mode = 'w')
+        logging.FileHandler('logs_and_tests/ingram_only_pipeline.log',mode = 'w')
     ]
 )
 

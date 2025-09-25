@@ -12,7 +12,7 @@ from helpers.paths import PATHS
 logging.basicConfig(
     level = logging.INFO,
     handlers = [
-        logging.FileHandler('upload_master_name_mapping.log'),
+        logging.FileHandler('logs_and_tests/upload_master_name_mapping.log'),
         logging.StreamHandler(sys.stdout)
     ]
 )

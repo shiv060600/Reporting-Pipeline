@@ -17,7 +17,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("data_integrity_diagnostic.log"),
+        logging.FileHandler("logs_and_tests/data_integrity_diagnostic.log"),
         logging.StreamHandler(sys.stdout)
     ]
 )

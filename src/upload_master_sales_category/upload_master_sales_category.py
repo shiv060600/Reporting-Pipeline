@@ -16,7 +16,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("upload_master_sales.log"),
+        logging.FileHandler("logs_and_tests/upload_master_sales.log"),
         logging.StreamHandler(sys.stdout)
     ]
 )

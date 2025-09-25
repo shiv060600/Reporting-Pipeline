@@ -26,7 +26,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("creat_ing_sales_log.txt"),
+        logging.FileHandler("logs_and_tests/create_ing_sales_log.txt"),
         logging.StreamHandler(sys.stdout)
     ]
 )

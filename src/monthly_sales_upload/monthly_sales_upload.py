@@ -23,7 +23,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler('monthly_upload.log',mode='w')
+        logging.FileHandler('logs_and_tests/monthly_upload.log',mode='w')
     ]
 )
 

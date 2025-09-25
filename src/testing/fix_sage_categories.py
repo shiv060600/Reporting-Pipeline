@@ -16,7 +16,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("fix_sage_categories.log"),
+        logging.FileHandler("logs_and_tests/fix_sage_categories.log"),
         logging.StreamHandler(sys.stdout)
     ]
 )
