@@ -2,7 +2,7 @@ src/helpers/*
 all_sales_incl_ing.xlsm
 venv/*
 combined_data.xlsx
-src/run_code/*
+src/run_cod
 src/backorders/*
 src/**/*.log
 combined_sales_report_procedure.sql

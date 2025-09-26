@@ -112,63 +112,47 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     ingram_sales_df = ingram_sales_df.drop(['MUL_RATIO'])
     sage_sales_df = sage_sales_df.drop(['MUL_RATIO'])
 
-    #drop ID columns for concant
-    ingram_sales_df = ingram_sales_df.drop(["HQ_NUMBER","SL_NUMBER","ISBN","TITLE"])
-    sage_sales_df = sage_sales_df.drop(["SAGE_ID","ISBN","TITLE"])
+    #Group each DF on its own first. need to do this for report_3_combined.
 
-    #logic for Erics request of adding a '*' next to cusomter who are both from IPS (SAGE) and INGWS (ING)
-    sage_customers = set(sage_sales_df["NAMECUST"].unique().to_list())
-    ingram_customers = set((ingram_sales_df["NAMECUST"].unique().to_list()))
-    customers_in_both = sage_customers.intersection(ingram_customers) #set addition
-    #create function to add '*'
-    def add_star(value):
-        if value in customers_in_both:
-            return value + '*'
-        else:
-            return value
-
-    sage_sales_df = sage_sales_df.with_columns(
-        pl.col("NAMECUST").map_elements(add_star,return_dtype=pl.Utf8)
-    )
-    ingram_sales_df = ingram_sales_df.with_columns(
-        pl.col("NAMECUST").map_elements(add_star,return_dtype=pl.Utf8)
-    )
-
-    combined_df = pl.concat([sage_sales_df,ingram_sales_df])
-    grouping_keys = ["NAMECUST","TUTTLE_SALES_CATEGORY","YEARMONTH"]
-    aggregate_expressions = [
-        pl.col("NETAMT").sum().alias("NETAMT"),
-        pl.col("NETUNITS").sum().alias("NETUNITS"),
-        pl.col("TARGET_NETAMT").sum().alias("TARGET_NETAMT"),
-        pl.col("2025_Target").first().alias('2025_Target')
-    ]
-
-    combined_df = combined_df.group_by(grouping_keys).agg(aggregate_expressions)
-    base_df = combined_df.select(['NAMECUST','TUTTLE_SALES_CATEGORY','2025_Target']).unique()
+    #Define dates here
     curr_date = datetime.datetime.now()
-
-    ytd_values = combined_df.filter(
-        pl.col("YEARMONTH").cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == curr_date.year
-    ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
-        pl.col("NETAMT").sum().alias("YTD_ACTUAL"),
-        pl.col("TARGET_NETAMT").sum().alias("YTD_TARGET")
-    ])
-
-    report_df = base_df.join(
-        ytd_values,
-        on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
-        how='left'
-    )
-
-    report_df = report_df.with_columns(
-        pl.col("2025_Target").fill_null(404.404)
-    )
-
-    #Monthly columns target and actual logic
     curr_month = curr_date.month
     curr_year = curr_date.year
+
+    #Ingram first
+    """
+    Current ingram columns : HQ_NUMBER,SL_NUMBER,ISBN,TITLE,NAMECUST,NETUNITS,NETAMT,TUTTLE_SALES_CATEGORY,2025_Target,YEARMONTH
+    """
+    #dont need SL number ISBN or TITLE here
+    ingram_sales_df = ingram_sales_df.drop(['SL_NUMBER','ISBN','TITLE'])
+    ingram_grouping_keys = ['HQ_NUMBER','NAMECUST','2025_Target','TUTTLE_SALES_CATEGORY','YEARMONTH']
+    ingram_agg_expressions = [
+        pl.col("NETAMT").sum().alias("NETAMT"),
+        pl.col("NETUNITS").sum().alias("NETUNITS"),
+        pl.col("TARGET_NETAMT").sum().alias("TARGET_NETAMT")
+    ]
+
+    ingram_base_df = ingram_sales_df[['HQ_NUMBER','NAMECUST','TUTTLE_SALES_CATEGORY','2025_Target']].unique()
+    ingram_combined_df = ingram_sales_df.group_by(ingram_grouping_keys).agg(ingram_agg_expressions)
+
+    #YTD logic Ingram
+    ingram_ytd_values = ingram_combined_df.filter(
+        pl.col('YEARMONTH').cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == curr_year
+        ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg(
+            pl.col('NETAMT').sum().alias('YTD_ACTUAL'),
+            pl.col('TARGET_NETAMT').sum().alias('YTD_TARGET')
+        )
+    
+    ingram_report_df = ingram_base_df.join(
+        ingram_ytd_values,
+        on = ['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+        how = 'left'
+    )
+
+    #Monthly columns target and actual logic Ingram
     year_months = []
     target_months_to_drop = []
+    final_agg_expressions = []
     for i in range(1,13):
         calc_month = curr_month - i
         calc_year = curr_year
@@ -181,42 +165,49 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         actual_column_name = f"{datetime_object.strftime(format = '%b_%y')} Acutual"
         target_column_name = f"{datetime_object.strftime(format = '%b_%y')} Target"
 
+        final_agg_expressions.append(
+            pl.col(actual_column_name).sum().alias(actual_column_name)
+        )
+        final_agg_expressions.append(
+            pl.col(target_column_name).sum().alias(target_column_name)
+        )
+
         #add to drop list if not the previous month
         if i != 1:
             target_months_to_drop.append(target_column_name)
         
-        month_values = combined_df.filter(
+        month_values = ingram_combined_df.filter(
             pl.col("YEARMONTH") == yyyyMM
         ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
             pl.col('NETAMT').sum().alias(actual_column_name),
             pl.col('TARGET_NETAMT').sum().alias(target_column_name)
         ])
 
-        report_df = report_df.join(
+        ingram_report_df = ingram_report_df.join(
             month_values,
             on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
             how='left'
         )
 
-        report_df = report_df.with_columns(
+        ingram_report_df = ingram_report_df.with_columns(
             pl.col(actual_column_name).fill_null(0),
             pl.col(target_column_name).fill_null(0)
         )
     #12m rolling logic 
-    twelve_month_rolling_values = combined_df.filter(
+    twelve_month_rolling_values = ingram_combined_df.filter(
         pl.col('YEARMONTH').is_in(year_months)
     ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
         pl.col('NETAMT').sum().alias('12M_ROLLING_ACTUAL'),
         pl.col('TARGET_NETAMT').sum().alias('12M_ROLLING_TARGET')
     ])
 
-    report_df = report_df.join(
+    ingram_report_df = ingram_report_df.join(
         twelve_month_rolling_values,
         on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
         how='left'
     )
 
-    report_df = report_df.with_columns(
+    ingram_report_df = ingram_report_df.with_columns(
         pl.col("12M_ROLLING_ACTUAL").fill_null(0),
         pl.col("12M_ROLLING_TARGET").fill_null(0)
     )
@@ -224,19 +215,159 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     #yearly sums logic
     for i in range(1,3):
         calc_year = curr_year - i 
-        year_values = combined_df.filter(
+        year_values = ingram_combined_df.filter(
             pl.col('YEARMONTH').cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == calc_year
         ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
             pl.col('NETAMT').sum().alias(f"{calc_year}_ACTUAL")
         ])
-        report_df = report_df.join(
+        ingram_report_df = ingram_report_df.join(
             year_values,
             on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
             how='left'
         )
-        report_df = report_df.with_columns(
+        ingram_report_df = ingram_report_df.with_columns(
             pl.col(f"{calc_year}_ACTUAL").fill_null(0)
         )
+    """
+    SAGE Grouping Logic
+    Current Sage df columns = SAGE_ID,ISBN,TITLE,NAMECUST,NETUNITS,NETAMT,TUTTLE_SALES_CATEGORY,2025_Target,YEARMONTH
+    """
+    #dont need SL number ISBN or TITLE here
+    sage_sales_df = sage_sales_df.drop(['ISBN','TITLE'])
+    sage_grouping_keys = ['SAGE_ID','NAMECUST','2025_Target','TUTTLE_SALES_CATEGORY','YEARMONTH']
+    sage_agg_expressions = [
+        pl.col("NETAMT").sum().alias("NETAMT"),
+        pl.col("NETUNITS").sum().alias("NETUNITS"),
+        pl.col("TARGET_NETAMT").sum().alias("TARGET_NETAMT")
+    ]
+
+    sage_base_df = sage_sales_df[['SAGE_ID','NAMECUST','TUTTLE_SALES_CATEGORY','2025_Target']].unique()
+    sage_combined_df = sage_sales_df.group_by(sage_grouping_keys).agg(sage_agg_expressions)
+
+
+
+    #YTD logic Ingram
+    sage_ytd_values = sage_combined_df.filter(
+        pl.col('YEARMONTH').cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == curr_year).group_by(
+            ['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg(
+                pl.col('NETAMT').sum().alias('YTD_ACTUAL'),
+                pl.col('TARGET_NETAMT').sum().alias('YTD_TARGET')
+            )
+    
+    sage_report_df = sage_base_df.join(
+        sage_ytd_values,
+        on = ['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+        how = 'left'
+    )
+
+    #Monthly columns target and actual logic Ingram
+    year_months = []
+    for i in range(1,13):
+        calc_month = curr_month - i
+        calc_year = curr_year
+        if calc_month <= 0:
+            calc_month += 12
+            calc_year -= 1
+        yyyyMM = 100 * calc_year + calc_month
+        year_months.append(yyyyMM)
+        datetime_object = datetime.datetime(calc_year,calc_month,1)
+        actual_column_name = f"{datetime_object.strftime(format = '%b_%y')} Acutual"
+        target_column_name = f"{datetime_object.strftime(format = '%b_%y')} Target"
+        
+        month_values = sage_combined_df.filter(
+            pl.col("YEARMONTH") == yyyyMM
+        ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
+            pl.col('NETAMT').sum().alias(actual_column_name),
+            pl.col('TARGET_NETAMT').sum().alias(target_column_name)
+        ])
+
+        sage_report_df = sage_report_df.join(
+            month_values,
+            on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+            how='left'
+        )
+
+        sage_report_df = sage_report_df.with_columns(
+            pl.col(actual_column_name).fill_null(0),
+            pl.col(target_column_name).fill_null(0)
+        )
+    #12m rolling logic 
+    twelve_month_rolling_values = sage_combined_df.filter(
+        pl.col('YEARMONTH').is_in(year_months)
+    ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
+        pl.col('NETAMT').sum().alias('12M_ROLLING_ACTUAL'),
+        pl.col('TARGET_NETAMT').sum().alias('12M_ROLLING_TARGET')
+    ])
+
+    sage_report_df = sage_report_df.join(
+        twelve_month_rolling_values,
+        on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+        how='left'
+    )
+
+    sage_report_df = sage_report_df.with_columns(
+        pl.col("12M_ROLLING_ACTUAL").fill_null(0),
+        pl.col("12M_ROLLING_TARGET").fill_null(0)
+    )
+
+    #yearly sums logic
+    for i in range(1,3):
+        calc_year = curr_year - i 
+        year_values = sage_combined_df.filter(
+            pl.col('YEARMONTH').cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == calc_year
+        ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
+            pl.col('NETAMT').sum().alias(f"{calc_year}_ACTUAL")
+        ])
+        sage_report_df = sage_report_df.join(
+            year_values,
+            on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+            how='left'
+        )
+        sage_report_df = sage_report_df.with_columns(
+            pl.col(f"{calc_year}_ACTUAL").fill_null(0)
+        )
+        print(sage_report_df.columns)
+        print(sage_report_df)
+
+    #drop ID columns for concant
+    ingram_report_df = ingram_report_df.drop(["HQ_NUMBER"])
+    sage_report_df = sage_report_df.drop(["SAGE_ID"])
+
+    #logic for Erics request of adding a '*' next to cusomter who are both from IPS (SAGE) and INGWS (ING)
+    sage_customers = set(sage_report_df["NAMECUST"].unique().to_list())
+    ingram_customers = set(ingram_report_df["NAMECUST"].unique().to_list())
+    customers_in_both = sage_customers.intersection(ingram_customers) #set addition
+    #create function to add '*'
+    def add_star(value):
+        if value in customers_in_both:
+            return value + '*'
+        else:
+            return value
+
+    sage_report_df = sage_report_df.with_columns(
+        pl.col("NAMECUST").map_elements(add_star,return_dtype=pl.Utf8)
+    )
+    ingram_report_df = ingram_report_df.with_columns(
+        pl.col("NAMECUST").map_elements(add_star,return_dtype=pl.Utf8)
+    )
+    #concatenate dfs vertically and build aggregate expressions
+    combined_df = pl.concat([ingram_report_df,sage_report_df])
+    one_year_prior = curr_year - 1
+    two_years_prior = curr_year - 2
+
+    grouping_keys = ["NAMECUST","TUTTLE_SALES_CATEGORY"]
+    
+    aggregate_expressions = [
+        pl.col("2025_Target").sum().alias('2025_Target'),
+        pl.col("YTD_ACTUAL").sum().alias("YTD_ACTUAL"),
+        pl.col("YTD_TARGET").sum().alias("YTD_TARGET"),
+        pl.col("12M_ROLLING_ACTUAL").sum().alias("12M_ROLLING_ACTUAL"),
+        pl.col("12M_ROLLING_TARGET").sum().alias("12M_ROLLING_TARGET"),
+        pl.col(f"{one_year_prior}_ACTUAL").sum().alias(f"{one_year_prior}_ACTUAL"),
+        pl.col(f"{two_years_prior}_ACTUAL").sum().alias(f"{two_years_prior}_ACTUAL")
+    ] + final_agg_expressions
+
+    report_df = combined_df.group_by(grouping_keys).agg(aggregate_expressions)
     
     #drop columns 
     cols_to_drop = target_months_to_drop
@@ -250,7 +381,7 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
 
     
     report_df = report_df.with_columns(
-        (((pl.col("YTD_TARGET") / pl.col("2025_Target"))*100).round(1)).alias('Capture_Rate'),
+        (((pl.col("YTD_ACTUAL") / pl.col("YTD_TARGET"))*100).round(1)).alias('Capture_Rate'),
         (pl.col("2025_Target") - pl.col("YTD_ACTUAL")).alias('Target_Remaining')
     )
 
@@ -258,7 +389,7 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     curr_month_str = datetime.datetime(curr_year, curr_month - 1 if curr_month > 1 else 12, 1).strftime('%b_%y')
     current_target_col = f"{curr_month_str} Target"
 
-    # Identify month columns (actuals only, excluding targets except current month)
+    # Identify month columns (actuals only, excluding targets except previous month)
     month_actual_columns = [col for col in report_df.columns if ' Acutual' in col]
     month_target_columns = [col for col in report_df.columns if ' Target' in col and col == current_target_col]
 
