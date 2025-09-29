@@ -74,8 +74,9 @@ if __name__ == "__main__":
     logger.info("Finished combining data and reporting logic for COMBINED_SALES_REPORT")
     logger.info("Starting REPORT_THREE_COMBINED")
     """
-    report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df)
+    report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df,tutliv_engine = engine)
     logger.info("Finished REPORT_THREE_COMBINED")
     logger.info("Program has finished")
+    engine.dispose() #close engine.
     time.sleep(3)
     sys.exit(0)

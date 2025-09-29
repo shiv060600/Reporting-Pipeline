@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from dbfread import DBF
 import sqlalchemy
+from sqlalchemy.engine import Engine
 import xlwings as xw
 import urllib
 from helpers.paths import PATHS
@@ -16,6 +17,8 @@ import sqlite3
 import polars as pl
 import logging
 import os
+from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy import text
 
 logging.basicConfig(
     level=logging.INFO,
@@ -39,7 +42,7 @@ DB_PATH = PATHS["DB_PATH"]
 TARGET_CALCULATIONS_FILE = PATHS["TARGET_CALCULATION_FILE"]
 
 
-def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFrame,target_calculations_df: pl.DataFrame):
+def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFrame,target_calculations_df: pl.DataFrame,tutliv_engine : Engine):
     #Order and standardize data (need IDs for mapping multiplication)
     column_order_ing = ['HQ_NUMBER','SL_NUMBER','ISBN', 'YEAR', 'MONTH', 'TITLE', 'NAMECUST', 'NETUNITS', 'NETAMT', 'TUTTLE_SALES_CATEGORY']
     column_order_sage = ['SAGE_ID','ISBN', 'YEAR', 'MONTH', 'TITLE', 'NAMECUST', 'NETUNITS', 'NETAMT', 'TUTTLE_SALES_CATEGORY']
@@ -326,8 +329,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         sage_report_df = sage_report_df.with_columns(
             pl.col(f"{calc_year}_ACTUAL").fill_null(0)
         )
-        print(sage_report_df.columns)
-        print(sage_report_df)
 
     #drop ID columns for concant
     ingram_report_df = ingram_report_df.drop(["HQ_NUMBER"])
@@ -442,7 +443,35 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
             report_df = report_df.with_columns(
                 pl.col(col).fill_null(404.404).cast(pl.Int64)
             )
+    """
+    We need to join by SAGE_NAME on Arcus Sage customer table to get the city state
+    this works because we have mapped all ingram names to sage names using the 
+    MASTER_INGRAM_NAME_MAPPING table
+    """
+    try:
+        customer_city_state = pd.read_sql(
+        """
+        SELECT DISTINCT
+            TRIM(NAMECUST) as C,
+            TRIM(NAMECITY) as CITY,
+            TRIM(CODESTTE) as STATE
+        FROM TUTLIV.dbo.ARCUS
+        """,tutliv_engine)   
+    except SQLAlchemyError as sqle:
+        logger.info(f"sqlalchemy error occured {sqle}")
+    except Exception as e:
+        logger.info(f"unexpected exception occured {e}")
+    report_df = report_df.to_pandas()
 
-    
-    #for testing
-    report_df.write_csv("logs_and_tests/report_3_combined.csv")
+    #for joining must remove * from a column
+    report_df['CUST_JOIN'] = report_df['Customer'].str.replace('*','')
+
+    report_df = report_df.merge(
+        customer_city_state,
+        left_on = 'CUST_JOIN',
+        right_on = 'C',
+        how = 'left'
+    )
+
+    report_df = report_df.drop(['CUST_JOIN','C'],axis=1)
+    report_df.to_sql("REPORT_THREE_COMBINED",tutliv_engine,schema='dbo',index=False,if_exists='replace')

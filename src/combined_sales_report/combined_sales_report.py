@@ -16,6 +16,8 @@ import sqlite3
 import polars as pl
 import logging
 import os
+from sqlalchemy.engine import Engine
+
 
 logging.basicConfig(
     level=logging.INFO,
