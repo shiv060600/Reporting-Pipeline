@@ -10,6 +10,7 @@ import openpyxl
 import pyodbc
 import logging
 import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 """
 This program exists to replace the ING_SALES table in TUTLIV,

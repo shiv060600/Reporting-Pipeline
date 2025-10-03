@@ -1,4 +1,6 @@
 #type: ignore
+import sys,os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import logging
 import pandas as pd
 import sqlalchemy
@@ -6,12 +8,11 @@ import urllib
 import datetime
 import json
 from rapidfuzz import process, fuzz
-import sys,os
 import time
-
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from helpers.paths import PATHS
+
+
+
 
 MONTHLY_ING_SALES = PATHS['MONTHLY_ING_SALES']
 SSMS_CONN_STRING = PATHS['SSMS_CONN_STRING']
@@ -23,7 +24,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler('logs_and_tests/monthly_upload.log',mode='w')
+        logging.FileHandler(r"H:\Upgrading_Database_Reporting_Systems\REPORTING_PIPELINE\src\logs_and_tests\reporting_pipeline.log",mode='w')
     ]
 )
 
@@ -135,6 +136,8 @@ logging.info("Starting monthly Ingram sales data append to SQL Server")
 grouped.to_sql('ING_SALES', engine, index=False, if_exists='append', schema='dbo')
 
 logging.info(f"Successfully appended {len(grouped)} rows to ING_SALES table")
+
+
 
 
 

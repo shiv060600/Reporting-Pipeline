@@ -1,4 +1,7 @@
 #type: ignore
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pandas as pd
 import numpy as np
 from dbfread import DBF
@@ -11,12 +14,12 @@ from helpers.paths import ING_QUERY, SAGE_QUERY
 import datetime
 import json
 from rapidfuzz import process, fuzz
-import sys
+
 import time
 import sqlite3
 import polars as pl
 import logging
-import os
+
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import text
 
@@ -24,7 +27,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("logs_and_tests/reporting_pipeline.log",mode='w'),
+        logging.FileHandler(r"H:\Upgrading_Database_Reporting_Systems\REPORTING_PIPELINE\src\logs_and_tests\reporting_pipeline.log",mode='w'),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -101,6 +104,8 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         (pl.col("NETAMT") * pl.col("MUL_RATIO").fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
 
+    print(ingram_sales_df.filter(pl.col("TUTTLE_SALES_CATEGORY").is_null()))
+
 
     sage_sales_df = sage_sales_df.join(
         target_calculations_df,
@@ -110,6 +115,8 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     ).with_columns(
         (pl.col('NETAMT') * pl.col('MUL_RATIO').fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
+
+    print(sage_sales_df.filter(pl.col("TUTTLE_SALES_CATEGORY").is_null()))
 
     #Drop MUL_RATIO after chaining operations
     ingram_sales_df = ingram_sales_df.drop(['MUL_RATIO'])
@@ -146,6 +153,7 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
             pl.col('TARGET_NETAMT').sum().alias('YTD_TARGET')
         )
     
+    #join ytd and base to get the base report going
     ingram_report_df = ingram_base_df.join(
         ingram_ytd_values,
         on = ['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
@@ -165,7 +173,7 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         yyyyMM = 100 * calc_year + calc_month
         year_months.append(yyyyMM)
         datetime_object = datetime.datetime(calc_year,calc_month,1)
-        actual_column_name = f"{datetime_object.strftime(format = '%b_%y')} Acutual"
+        actual_column_name = f"{datetime_object.strftime(format = '%b_%y')} Actual"
         target_column_name = f"{datetime_object.strftime(format = '%b_%y')} Target"
 
         final_agg_expressions.append(
@@ -274,7 +282,7 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         yyyyMM = 100 * calc_year + calc_month
         year_months.append(yyyyMM)
         datetime_object = datetime.datetime(calc_year,calc_month,1)
-        actual_column_name = f"{datetime_object.strftime(format = '%b_%y')} Acutual"
+        actual_column_name = f"{datetime_object.strftime(format = '%b_%y')} Actual"
         target_column_name = f"{datetime_object.strftime(format = '%b_%y')} Target"
         
         month_values = sage_combined_df.filter(
@@ -391,14 +399,14 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     current_target_col = f"{curr_month_str} Target"
 
     # Identify month columns (actuals only, excluding targets except previous month)
-    month_actual_columns = [col for col in report_df.columns if ' Acutual' in col]
+    month_actual_columns = [col for col in report_df.columns if ' Actual' in col]
     month_target_columns = [col for col in report_df.columns if ' Target' in col and col == current_target_col]
 
     # Sort month columns chronologically (most recent first)
     def sort_month_columns(col_list):
         def month_sort_key(col):
             # Extract month and year from column name
-            parts = col.replace(' Acutual', '').replace(' Target', '').split('_')
+            parts = col.replace(' Actual', '').replace(' Target', '').split('_')
             month_abbr, year_str = parts[0], parts[1]
             month_num = datetime.datetime.strptime(month_abbr, '%b').month
             year_num = 2000 + int(year_str)  # Convert 2-digit year to 4-digit
@@ -461,6 +469,8 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         logger.info(f"sqlalchemy error occured {sqle}")
     except Exception as e:
         logger.info(f"unexpected exception occured {e}")
+    
+    #need to convert to pandas for sql upload
     report_df = report_df.to_pandas()
 
     #for joining must remove * from a column
@@ -475,3 +485,5 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
 
     report_df = report_df.drop(['CUST_JOIN','C'],axis=1)
     report_df.to_sql("REPORT_THREE_COMBINED",tutliv_engine,schema='dbo',index=False,if_exists='replace')
+
+    

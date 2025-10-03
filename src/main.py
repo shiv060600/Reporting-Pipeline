@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from dbfread import DBF
 import sqlalchemy
+from sqlalchemy.engine import Engine
 import xlwings as xw
 import urllib
 from helpers.paths import PATHS
@@ -68,12 +69,12 @@ if __name__ == "__main__":
         "2025" : float,
         "MUL_RATIO" : float
     }))
-    """
+
     logger.info("Starting generation of COMBINED_SALES_REPORT")
-    combined_sales_report(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df)
+    combined_sales_report(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df, tutliv_engine=engine)
     logger.info("Finished combining data and reporting logic for COMBINED_SALES_REPORT")
     logger.info("Starting REPORT_THREE_COMBINED")
-    """
+
     report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df,tutliv_engine = engine)
     logger.info("Finished REPORT_THREE_COMBINED")
     logger.info("Program has finished")

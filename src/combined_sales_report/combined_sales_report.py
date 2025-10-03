@@ -1,4 +1,7 @@
 #type: ignore
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pandas as pd
 import numpy as np
 from dbfread import DBF
@@ -10,13 +13,14 @@ from helpers.paths import ING_QUERY, SAGE_QUERY
 import datetime
 import json
 from rapidfuzz import process, fuzz
-import sys
 import time
 import sqlite3
 import polars as pl
 import logging
-import os
+
 from sqlalchemy.engine import Engine
+
+
 
 
 logging.basicConfig(
@@ -49,7 +53,7 @@ In other words, each row of data is all the sales (NETAMT,NETQY) for a book sold
 """  
 
 
-def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFrame):
+def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFrame, tutliv_engine: Engine):
 
     logger.info(f"Ingram columns: {ingram_sales_df.columns}")
     logger.info(f"Sage columns: {sage_sales_df.columns}")
@@ -101,7 +105,6 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
 
     base_df = sage_and_ingram_sales.select(['ISBN','TITLE','NAMECUST','TUTTLE_SALES_CATEGORY']).unique()
 
-    # Add validation logging
     logger.info(f"Base dataframe shape: {base_df.shape}")
     logger.info(f"Base dataframe unique combinations: {len(base_df)}")
 
@@ -232,7 +235,7 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
                 NETSALES as ALL_ACCTS_12M_DOLLARS 
             FROM TUTLIV.dbo.ALL_ACCOUNTS_12M_ROLL
             """,
-        engine
+        tutliv_engine
         ))
         
         all_accounts_df = all_accounts_df.with_columns([
@@ -259,7 +262,7 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
                 TRIM(WEBCAT2_DESCR) as WEBCAT2_DESCR
             FROM TUTLIV.dbo.BOOK_DETAILS
             """,
-            engine
+            tutliv_engine
         ))
         book_details_df = book_details_df.with_columns([
             pl.col('ISBN').cast(pl.Utf8).str.strip_chars().str.replace(r'-', '')
@@ -394,7 +397,7 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
         logger.info(f"Writing to SQL Server table: {schema}.{production_table_name}")
         pandas_df.to_sql(
             name=production_table_name,
-            con=engine,
+            con=tutliv_engine,
             schema=schema,
             if_exists='replace',
             index=False
@@ -404,6 +407,7 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
     except Exception as e:
         logger.error(f"Error uploading to SQL Server test table: {e}")
     finally:
-        engine.dispose()
+        #engine disposal handled in main.py
+        pass
         
     logger.info("Processing completed successfully")

@@ -4,7 +4,7 @@ import sqlalchemy
 import xlwings as xw
 import urllib,os,sys,logging
 
-sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from helpers.paths import PATHS
 
 MASTER_SALES_CATEGORIES = PATHS["MASTER_SALES_CATEGORIES"]
