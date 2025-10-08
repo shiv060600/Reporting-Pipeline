@@ -23,14 +23,7 @@ from sqlalchemy.engine import Engine
 
 
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("logs_and_tests/reporting_pipeline.log",mode='w'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
+
 logger = logging.getLogger(__name__)
 
 SSMS_CONN_STRING = PATHS["SSMS_CONN_STRING"]

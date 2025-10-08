@@ -2,9 +2,24 @@
 import os
 import subprocess
 import sys
+import logging
 #note: for run_all_manual the order of the scripts must be correct
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from backorders.upload_backorders import backorder_report
 
+logging.basicConfig(
+    level = logging.INFO,
+    handlers=[
+        
+    ]
+)
+
+
+if 
+
+
+"""
+OLD BUT WORKS
 ROOT_FOLDER = "H:\\Upgrading_Database_Reporting_Systems\\REPORTING_PIPELINE\\src"
 
 #for now we do not include create_ing_sales or monthly_sales_upload
@@ -22,3 +37,4 @@ for path in PYTHON_EXECUTABLES:
         subprocess.run([python_system_executable,full_file_path],check=True,cwd=ROOT_FOLDER)
     else:
         print(f"{full_file_path} not found")
+"""

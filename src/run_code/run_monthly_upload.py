@@ -10,10 +10,10 @@ ROOT_FOLDER = "H:\\Upgrading_Database_Reporting_Systems\\REPORTING_PIPELINE\\src
 #for now we do not include create_ing_sales or monthly_sales_upload
 
 PYTHON_EXECUTABLES = [
-    "monthly_sales_upload\\monthly_sales_upload.py",
-    "upload_master_name_mapping\\upload_master_name_mapping.py",
-    "upload_master_sales_category\\upload_master_sales_category.py",
-    "main.py",
+    "monthly_sales_upload\\monthly_sales_upload.py", #sales upload will happen in the morning
+    #"upload_master_name_mapping\\upload_master_name_mapping.py",
+    #"upload_master_sales_category\\upload_master_sales_category.py",
+    #"main.py",
     #"ingram_only_pipleine\\ingram_only_pipeline.py"
 ]
 

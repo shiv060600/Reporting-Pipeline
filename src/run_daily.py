@@ -10,7 +10,8 @@ from helpers.paths import PATHS
 from helpers.paths import ING_QUERY, SAGE_QUERY
 from combined_sales_report.combined_sales_report import combined_sales_report
 from report_three_combined.report_three_combined import report_three_combined
-from run_all_book_reports.run_all_book_reports import revenue_report
+from upload_master_name_mapping.upload_master_name_mapping import main as name_mapping_upload
+from upload_master_sales_category.upload_master_sales_category import main as category_mapping_upload
 import datetime
 import json
 from rapidfuzz import process, fuzz
@@ -25,7 +26,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("logs_and_tests/reporting_pipeline.log", mode='w'),
+        logging.FileHandler("logs_and_tests/daily_reporting_pipeline.log", mode='w'),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -41,10 +42,36 @@ EXPORT_XL = PATHS["ALL_SALES_INCL_ING"]
 DB_PATH = PATHS["DB_PATH"]
 TARGET_CALCULATIONS_FILE = PATHS["TARGET_CALCULATION_FILE"]
 
+"""
+This Code will run daily,
+It will upload mapping files, run combined sales report and then run report three combined.
+
+"""
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("logs_and_tests/daily_auto_run_upload_mappers_combined_sales_report_and_report_three_combined.log", mode='w'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+
+logger = logging.getLogger(__name__)
+
 
 if __name__ == "__main__":
     params = urllib.parse.quote_plus(SSMS_CONN_STRING)
     engine = sqlalchemy.create_engine(f"mssql+pyodbc:///?odbc_connect={params}",connect_args={'timeout':1800,'connect_timeout':120},pool_recycle=3600)
+    #run name mapping and category mapping upload
+    logger.info("Starting daily upload of name mapping upload")
+    name_mapping_upload()
+    logger.info("finished name_mapping_upload")
+
+    logger.info("Starting daily upload of category mapping")
+    category_mapping_upload()
+    logger.info('finished category_mapping_upload')
+
     """
     Begin by getting all INGRAM Sales data for the last 3 years not including the current month
 
@@ -79,10 +106,7 @@ if __name__ == "__main__":
     #report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df,tutliv_engine = engine)
     logger.info("Finished REPORT_THREE_COMBINED")
 
-    logger.info('starting revenue report')
-    #revenue_report(ing_sales_df=ingram_sales_df,sage_sales_df=sage_sales_df,tutliv_engine=engine)
-    logger.info('finished revenue report')
-    logger.info("Program has finished")
+    logger.info("Daily Run has finished")
 
     engine.dispose() #close engine.
     time.sleep(3)

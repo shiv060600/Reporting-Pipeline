@@ -23,14 +23,6 @@ import logging
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import text
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(r"H:\Upgrading_Database_Reporting_Systems\REPORTING_PIPELINE\src\logs_and_tests\reporting_pipeline.log",mode='w'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
 
 logger = logging.getLogger(__name__)
 
@@ -104,8 +96,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         (pl.col("NETAMT") * pl.col("MUL_RATIO").fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
 
-    print(ingram_sales_df.filter(pl.col("TUTTLE_SALES_CATEGORY").is_null()))
-
 
     sage_sales_df = sage_sales_df.join(
         target_calculations_df,
@@ -116,7 +106,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         (pl.col('NETAMT') * pl.col('MUL_RATIO').fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
 
-    print(sage_sales_df.filter(pl.col("TUTTLE_SALES_CATEGORY").is_null()))
 
     #Drop MUL_RATIO after chaining operations
     ingram_sales_df = ingram_sales_df.drop(['MUL_RATIO'])
