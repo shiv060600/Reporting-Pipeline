@@ -8,10 +8,10 @@ import xlwings as xw
 import urllib
 from helpers.paths import PATHS
 from helpers.paths import ING_QUERY, SAGE_QUERY
-from combined_sales_report.combined_sales_report import combined_sales_report
-from report_three_combined.report_three_combined import report_three_combined
-from upload_master_name_mapping.upload_master_name_mapping import main as name_mapping_upload
-from upload_master_sales_category.upload_master_sales_category import main as category_mapping_upload
+from pipelines.combined_sales_report import combined_sales_report
+from pipelines.report_three_combined import report_three_combined
+from database_uploads.upload_master_name_mapping import main as name_mapping_upload
+from database_uploads.upload_master_sales_category import main as category_mapping_upload
 import datetime
 import json
 from rapidfuzz import process, fuzz
@@ -100,10 +100,10 @@ if __name__ == "__main__":
     }))
 
     logger.info("Starting generation of COMBINED_SALES_REPORT")
-    #combined_sales_report(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df, tutliv_engine=engine)
+    combined_sales_report(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df, tutliv_engine=engine)
     logger.info("Finished combining data and reporting logic for COMBINED_SALES_REPORT")
     logger.info("Starting REPORT_THREE_COMBINED")
-    #report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df,tutliv_engine = engine)
+    report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df,tutliv_engine = engine)
     logger.info("Finished REPORT_THREE_COMBINED")
 
     logger.info("Daily Run has finished")

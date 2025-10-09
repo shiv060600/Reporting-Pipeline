@@ -17,12 +17,7 @@ import time
 import sqlite3
 import polars as pl
 import logging
-
 from sqlalchemy.engine import Engine
-
-
-
-
 
 logger = logging.getLogger(__name__)
 
