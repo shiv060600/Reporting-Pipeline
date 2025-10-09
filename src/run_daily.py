@@ -105,7 +105,6 @@ if __name__ == "__main__":
     logger.info("Starting REPORT_THREE_COMBINED")
     report_three_combined(ingram_sales_df = ingram_sales_df,sage_sales_df = sage_sales_df,target_calculations_df = target_calculations_df,tutliv_engine = engine)
     logger.info("Finished REPORT_THREE_COMBINED")
-
     logger.info("Daily Run has finished")
 
     engine.dispose() #close engine.

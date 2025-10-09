@@ -331,22 +331,22 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     ingram_report_df = ingram_report_df.drop(["HQ_NUMBER"])
     sage_report_df = sage_report_df.drop(["SAGE_ID"])
 
-    #logic for Erics request of adding a '*' next to cusomter who are both from IPS (SAGE) and INGWS (ING)
+    #logic for Erics request of adding a '~' next to cusomter who are both from IPS (SAGE) and INGWS (ING)
     sage_customers = set(sage_report_df["NAMECUST"].unique().to_list())
     ingram_customers = set(ingram_report_df["NAMECUST"].unique().to_list())
     customers_in_both = sage_customers.intersection(ingram_customers) #set addition
-    #create function to add '*'
-    def add_star(value):
+    #create function to add '~'
+    def add_tilda(value):
         if value in customers_in_both:
-            return value + '*'
+            return value + '~'
         else:
             return value
 
     sage_report_df = sage_report_df.with_columns(
-        pl.col("NAMECUST").map_elements(add_star,return_dtype=pl.Utf8)
+        pl.col("NAMECUST").map_elements(add_tilda,return_dtype=pl.Utf8)
     )
     ingram_report_df = ingram_report_df.with_columns(
-        pl.col("NAMECUST").map_elements(add_star,return_dtype=pl.Utf8)
+        pl.col("NAMECUST").map_elements(add_tilda,return_dtype=pl.Utf8)
     )
     #concatenate dfs vertically and build aggregate expressions
     combined_df = pl.concat([ingram_report_df,sage_report_df])
