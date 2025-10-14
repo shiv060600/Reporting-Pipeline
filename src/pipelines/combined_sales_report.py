@@ -398,4 +398,4 @@ def combined_sales_report(ingram_sales_df:pl.DataFrame,sage_sales_df:pl.DataFram
         #engine disposal handled in main.py
         pass
         
-    logger.info("Processing completed successfully")
+    logger.info("Combined sales report processing completed successfully")

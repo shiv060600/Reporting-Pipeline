@@ -96,6 +96,13 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         (pl.col("NETAMT") * pl.col("MUL_RATIO").fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
 
+    far_corner:pl.DataFrame = ingram_sales_df.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+    )
+
+    logger.info('Far corner after muljoin')
+    logger.info(far_corner)
+
 
     sage_sales_df = sage_sales_df.join(
         target_calculations_df,
@@ -123,31 +130,70 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     Current ingram columns : HQ_NUMBER,SL_NUMBER,ISBN,TITLE,NAMECUST,NETUNITS,NETAMT,TUTTLE_SALES_CATEGORY,2025_Target,YEARMONTH
     """
     #dont need SL number ISBN or TITLE here
-    ingram_sales_df = ingram_sales_df.drop(['SL_NUMBER','ISBN','TITLE'])
-    ingram_grouping_keys = ['HQ_NUMBER','NAMECUST','2025_Target','TUTTLE_SALES_CATEGORY','YEARMONTH']
+    ingram_sales_df = ingram_sales_df.drop(['ISBN','TITLE'])
+    ingram_grouping_keys = ['SL_NUMBER','HQ_NUMBER','NAMECUST','2025_Target','TUTTLE_SALES_CATEGORY','YEARMONTH']
     ingram_agg_expressions = [
         pl.col("NETAMT").sum().alias("NETAMT"),
         pl.col("NETUNITS").sum().alias("NETUNITS"),
         pl.col("TARGET_NETAMT").sum().alias("TARGET_NETAMT")
     ]
 
+    far_corner = ingram_sales_df.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+    )
+
+    logger.info('Far corner dropping ISBN and TITLE and before grouping')
+    logger.info(far_corner)
+
+
     ingram_base_df = ingram_sales_df[['HQ_NUMBER','NAMECUST','TUTTLE_SALES_CATEGORY','2025_Target']].unique()
+
+    far_corner = ingram_base_df.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+    )
+
+    logger.info('Far corner in the base df')
+    logger.info(far_corner)
+
     ingram_combined_df = ingram_sales_df.group_by(ingram_grouping_keys).agg(ingram_agg_expressions)
+
+    far_corner = ingram_combined_df.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+    )
+
+    logger.info('Far corner in combined(calculation) df')
+    logger.info(far_corner)
 
     #YTD logic Ingram
     ingram_ytd_values = ingram_combined_df.filter(
         pl.col('YEARMONTH').cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == curr_year
-        ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg(
+        ).group_by(['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg(
             pl.col('NETAMT').sum().alias('YTD_ACTUAL'),
             pl.col('TARGET_NETAMT').sum().alias('YTD_TARGET')
         )
     
+    far_corner = ingram_ytd_values.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+    )
+
+    logger.info('Far corner after ytd')
+    logger.info(far_corner)
+    
+
+    
     #join ytd and base to get the base report going
     ingram_report_df = ingram_base_df.join(
         ingram_ytd_values,
-        on = ['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+        on = ['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY'],
         how = 'left'
     )
+
+    far_corner = ingram_report_df.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+    )
+
+    logger.info('Far corner after joining ytd values on base')
+    logger.info(far_corner)
 
     #Monthly columns target and actual logic Ingram
     year_months = []
@@ -178,16 +224,30 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         
         month_values = ingram_combined_df.filter(
             pl.col("YEARMONTH") == yyyyMM
-        ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
+        ).group_by(['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
             pl.col('NETAMT').sum().alias(actual_column_name),
             pl.col('TARGET_NETAMT').sum().alias(target_column_name)
         ])
 
+        far_corner = month_values.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+        )
+
+        logger.info('Far corner in month values')
+        logger.info(far_corner)
+
         ingram_report_df = ingram_report_df.join(
             month_values,
-            on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+            on=['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY'],
             how='left'
         )
+
+        far_corner = ingram_report_df.filter(
+        pl.col('NAMECUST').str.contains('FAR CORNER')
+        )
+
+        logger.info(' far corner in ingram_report df after joining month values to ingram report df')
+        logger.info(far_corner)
 
         ingram_report_df = ingram_report_df.with_columns(
             pl.col(actual_column_name).fill_null(0),
@@ -196,14 +256,14 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
     #12m rolling logic 
     twelve_month_rolling_values = ingram_combined_df.filter(
         pl.col('YEARMONTH').is_in(year_months)
-    ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
+    ).group_by(['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
         pl.col('NETAMT').sum().alias('12M_ROLLING_ACTUAL'),
         pl.col('TARGET_NETAMT').sum().alias('12M_ROLLING_TARGET')
     ])
 
     ingram_report_df = ingram_report_df.join(
         twelve_month_rolling_values,
-        on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+        on=['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY'],
         how='left'
     )
 
@@ -217,12 +277,12 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         calc_year = curr_year - i 
         year_values = ingram_combined_df.filter(
             pl.col('YEARMONTH').cast(pl.Utf8).str.slice(0,4).cast(pl.Int64) == calc_year
-        ).group_by(['NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
+        ).group_by(['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY']).agg([
             pl.col('NETAMT').sum().alias(f"{calc_year}_ACTUAL")
         ])
         ingram_report_df = ingram_report_df.join(
             year_values,
-            on=['NAMECUST', 'TUTTLE_SALES_CATEGORY'],
+            on=['HQ_NUMBER','NAMECUST', 'TUTTLE_SALES_CATEGORY'],
             how='left'
         )
         ingram_report_df = ingram_report_df.with_columns(

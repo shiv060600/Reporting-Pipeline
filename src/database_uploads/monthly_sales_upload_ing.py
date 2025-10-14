@@ -10,6 +10,7 @@ import json
 from rapidfuzz import process, fuzz
 import time
 from helpers.paths import PATHS
+import datetime
 
 
 logger = logging.getLogger(__name__)
@@ -23,6 +24,15 @@ def monthly_sales_upload() -> None:
     params = urllib.parse.quote_plus(SSMS_CONN_STRING)
     engine = sqlalchemy.create_engine(f"mssql+pyodbc:///?odbc_connect={params}",connect_args={'timeout':1800,'connect_timeout':120},pool_recycle=3600)
 
+    curr_date = datetime.datetime.now()
+    curr_month = curr_date.month
+
+    if curr_month == 1:
+        prev_month = 12
+    else:
+        prev_month = curr_month - 1
+
+
     try:
         monthly_sales_df = pd.read_excel(MONTHLY_ING_SALES, sheet_name='Sheet1',dtype={'SL Account Number': str, 'HQ Account Number': str, 'EAN': str})
         """
@@ -35,6 +45,12 @@ def monthly_sales_upload() -> None:
     except Exception as e:
         logger.error(f"Failed to read monthly sales file: {e}")
         sys.exit(1)
+    
+    list_months = monthly_sales_df['Date'].str[0:2].replace('0','').to_list()
+
+    if not all([month == prev_month for month in list_months]):
+        #correct sales are not in the
+        #implement email send
 
     try:
         ingram_master_sales_categories = pd.read_sql(
@@ -82,6 +98,9 @@ def monthly_sales_upload() -> None:
 
     monthly_sales_df["YEAR"] = monthly_sales_df["Date"].str[6:]
     monthly_sales_df["MONTH"] = monthly_sales_df["Date"].str[0:2].str.replace('0','')
+    
+    
+
     logger.info('Added YEAR and MONTH columns')
 
     monthly_sales_df = monthly_sales_df.rename(columns={

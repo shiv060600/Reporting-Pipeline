@@ -17,7 +17,7 @@ import sqlite3
 import polars as pl
 import logging
 import os
-from monthly_sales_upload.monthly_sales_upload import monthly_sales_upload
+from database_uploads.monthly_sales_upload_ing import monthly_sales_upload
 
 logging.basicConfig(
     level=logging.INFO,

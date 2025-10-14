@@ -8,9 +8,9 @@ import xlwings as xw
 import urllib
 from helpers.paths import PATHS
 from helpers.paths import ING_QUERY, SAGE_QUERY
-from combined_sales_report.combined_sales_report import combined_sales_report
-from report_three_combined.report_three_combined import report_three_combined
-from run_all_book_reports.run_all_book_reports import revenue_report
+from pipelines.combined_sales_report import combined_sales_report
+from pipelines.report_three_combined import report_three_combined
+from pipelines.book_level_reports import revenue_report
 import datetime
 import json
 from rapidfuzz import process, fuzz
