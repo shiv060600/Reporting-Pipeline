@@ -1,15 +1,70 @@
-[2025-10-15T11:03:47.316-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T11:03:47.319-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T13:28:10.810-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T13:28:10.813-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
   ____________       _____________
  ____    |__( )_________  __/__  /________      __
 ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
 ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
-[2025-10-15T11:03:50.780-0400] {scheduler_job_runner.py:1022} INFO - Starting the scheduler
-[2025-10-15T11:03:50.802-0400] {executor_loader.py:269} INFO - Loaded executor: :LocalExecutor:
-[2025-10-15T11:03:50.835-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
-[2025-10-15 11:03:50 -0400] [4573] [INFO] Starting gunicorn 23.0.0
-[2025-10-15 11:03:50 -0400] [4573] [INFO] Listening at: http://[::]:8793 (4573)
-[2025-10-15 11:03:50 -0400] [4573] [INFO] Using worker: sync
-[2025-10-15 11:03:50 -0400] [4574] [INFO] Booting worker with pid: 4574
-[2025-10-15 11:03:50 -0400] [4575] [INFO] Booting worker with pid: 4575
+[2025-10-15T13:28:11.312-0400] {scheduler_job_runner.py:1022} INFO - Starting the scheduler
+[2025-10-15T13:28:11.323-0400] {executor_loader.py:269} INFO - Loaded executor: :LocalExecutor:
+[2025-10-15T13:28:11.331-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15 13:28:11 -0400] [5708] [INFO] Starting gunicorn 23.0.0
+[2025-10-15 13:28:11 -0400] [5708] [ERROR] Connection in use: ('::', 8793)
+[2025-10-15 13:28:11 -0400] [5708] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-10-15T13:28:11.413-0400] {scheduler_job_runner.py:2241} INFO - Marked 1 SchedulerJob instances as failed
+[2025-10-15 13:28:12 -0400] [5708] [ERROR] Connection in use: ('::', 8793)
+[2025-10-15 13:28:12 -0400] [5708] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-10-15 13:28:13 -0400] [5708] [ERROR] Connection in use: ('::', 8793)
+[2025-10-15 13:28:13 -0400] [5708] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-10-15 13:28:14 -0400] [5708] [ERROR] Connection in use: ('::', 8793)
+[2025-10-15 13:28:14 -0400] [5708] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-10-15 13:28:15 -0400] [5708] [ERROR] Connection in use: ('::', 8793)
+[2025-10-15 13:28:15 -0400] [5708] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-10-15 13:28:16 -0400] [5708] [ERROR] Can't connect to ('::', 8793)
+[2025-10-15T13:28:55.872-0400] {dag.py:2236} INFO - Setting next_dagrun for daily_mapping_upload to 2025-10-16 01:00:00+00:00, run_after=2025-10-16 01:00:00+00:00
+[2025-10-15T13:28:55.942-0400] {scheduler_job_runner.py:461} INFO - 1 tasks up for execution:
+	<TaskInstance: daily_mapping_upload.run_daily_pipeline scheduled__2025-10-15T01:00:00+00:00 [scheduled]>
+[2025-10-15T13:28:55.943-0400] {scheduler_job_runner.py:533} INFO - DAG daily_mapping_upload has 0/16 running and queued tasks
+[2025-10-15T13:28:55.944-0400] {scheduler_job_runner.py:672} INFO - Setting the following tasks to queued state:
+	<TaskInstance: daily_mapping_upload.run_daily_pipeline scheduled__2025-10-15T01:00:00+00:00 [scheduled]>
+[2025-10-15T13:28:55.946-0400] {scheduler_job_runner.py:778} INFO - Trying to enqueue tasks: [<TaskInstance: daily_mapping_upload.run_daily_pipeline scheduled__2025-10-15T01:00:00+00:00 [scheduled]>] for executor: LocalExecutor(parallelism=32)
+[2025-10-15T13:28:55.953-0400] {local_executor.py:61} INFO - Worker starting up pid=5746
+2025-10-15 13:28:56 [info     ] Secrets backends loaded for worker [supervisor] backend_classes=['EnvironmentVariablesBackend'] count=1
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py:476 DeprecationWarning: This process (pid=5746) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-15T13:28:57.103-0400] {_client.py:1025} INFO - HTTP Request: PATCH http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/run "HTTP/1.1 200 OK"
+2025-10-15 13:28:57 [debug    ] Sending                        [supervisor] msg=StartupDetails(ti=TaskInstance(id=UUID('0199e8ea-f33e-7044-8202-bd7fe5d7230c'), task_id='run_daily_pipeline', dag_id='daily_mapping_upload', run_id='scheduled__2025-10-15T01:00:00+00:00', try_number=1, map_index=-1, pool_slots=1, queue='default', priority_weight=1, executor_config={}, parent_context_carrier={}, context_carrier=None, queued_dttm=None), dag_rel_path='run_daily_dag.py', bundle_info=BundleInfo(name='dags-folder', version=None), start_date=datetime.datetime(2025, 10, 15, 17, 28, 56, 360833, tzinfo=datetime.timezone.utc), ti_context=TIRunContext(dag_run=DagRun(dag_id='daily_mapping_upload', run_id='scheduled__2025-10-15T01:00:00+00:00', logical_date=datetime.datetime(2025, 10, 15, 1, 0, tzinfo=TzInfo(0)), data_interval_start=datetime.datetime(2025, 10, 15, 1, 0, tzinfo=TzInfo(0)), data_interval_end=datetime.datetime(2025, 10, 15, 1, 0, tzinfo=TzInfo(0)), run_after=datetime.datetime(2025, 10, 15, 1, 0, tzinfo=TzInfo(0)), start_date=datetime.datetime(2025, 10, 15, 17, 28, 55, 901952, tzinfo=TzInfo(0)), end_date=None, clear_number=0, run_type=<DagRunType.SCHEDULED: 'scheduled'>, state=<DagRunState.RUNNING: 'running'>, conf={}, consumed_asset_events=[]), task_reschedule_count=0, max_tries=0, variables=[], connections=[], upstream_map_indexes={}, next_method=None, next_kwargs=None, xcom_keys_to_clear=[], should_retry=False), type='StartupDetails')
+[2025-10-15T13:28:57.131-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+2025-10-15 13:28:57 [debug    ] Received message from task runner [supervisor] msg=SetRenderedFields(rendered_fields={'bash_command': 'powershell.exe -Command "cd H:\\Upgrading_Database_Reporting_Systems\\REPORTING_PIPELINE\\src; conda activate base; python run_daily.py"', 'env': None, 'cwd': None}, type='SetRenderedFields')
+[2025-10-15T13:28:57.176-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/rtif "HTTP/1.1 201 Created"
+[2025-10-15T13:29:03.015-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:07.474-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:12.563-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:19.058-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:24.092-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:29.120-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:34.153-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:42.243-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:47.274-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:52.313-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:29:58.821-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+[2025-10-15T13:30:04.095-0400] {_client.py:1025} INFO - HTTP Request: PUT http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat "HTTP/1.1 204 No Content"
+2025-10-15 13:30:04 [debug    ] Received message from task runner [supervisor] msg=SetXCom(key='return_value', value='2025-10-15 13:30:00,770 - __main__ - INFO - Daily Run has finished', dag_id='daily_mapping_upload', run_id='scheduled__2025-10-15T01:00:00+00:00', task_id='run_daily_pipeline', map_index=-1, mapped_length=None, type='SetXCom')
+[2025-10-15T13:30:04.116-0400] {_client.py:1025} INFO - HTTP Request: POST http://localhost:8080/execution/xcoms/daily_mapping_upload/scheduled__2025-10-15T01:00:00+00:00/run_daily_pipeline/return_value "HTTP/1.1 201 Created"
+2025-10-15 13:30:04 [debug    ] Received message from task runner [supervisor] msg=SucceedTask(state='success', end_date=datetime.datetime(2025, 10, 15, 17, 30, 4, 117235, tzinfo=datetime.timezone.utc), task_outlets=[], outlet_events=[], rendered_map_index=None, type='SucceedTask')
+[2025-10-15T13:30:04.144-0400] {_client.py:1025} INFO - HTTP Request: PATCH http://localhost:8080/execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/state "HTTP/1.1 204 No Content"
+2025-10-15 13:30:04 [info     ] Task finished                  [supervisor] duration=67.80204239900013 exit_code=0 final_state=success
+[2025-10-15T13:30:04.264-0400] {scheduler_job_runner.py:835} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='daily_mapping_upload', task_id='run_daily_pipeline', run_id='scheduled__2025-10-15T01:00:00+00:00', try_number=1, map_index=-1)
+[2025-10-15T13:30:04.281-0400] {scheduler_job_runner.py:879} INFO - TaskInstance Finished: dag_id=daily_mapping_upload, task_id=run_daily_pipeline, run_id=scheduled__2025-10-15T01:00:00+00:00, map_index=-1, run_start_date=2025-10-15 17:28:56.360833+00:00, run_end_date=2025-10-15 17:30:04.117235+00:00, run_duration=15.756, state=success, executor=LocalExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=0, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-10-15 17:28:55.945278+00:00, scheduled_dttm=2025-10-15 17:28:55.922174+00:00,queued_by_job_id=12, pid=5747
+[2025-10-15T13:30:11.580-0400] {dagrun.py:1180} INFO - Marking run <DagRun daily_mapping_upload @ 2025-10-15 01:00:00+00:00: scheduled__2025-10-15T01:00:00+00:00, state:running, queued_at: 2025-10-15 17:28:55.863922+00:00. run_type: scheduled> successful
+[2025-10-15T13:30:11.581-0400] {dagrun.py:1238} INFO - DagRun Finished: dag_id=daily_mapping_upload, logical_date=2025-10-15 01:00:00+00:00, run_id=scheduled__2025-10-15T01:00:00+00:00, run_start_date=2025-10-15 17:28:55.901952+00:00, run_end_date=2025-10-15 17:30:11.581448+00:00, run_duration=75.679496, state=success, run_type=scheduled, data_interval_start=2025-10-15 01:00:00+00:00, data_interval_end=2025-10-15 01:00:00+00:00,
+[2025-10-15T13:33:11.473-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T13:33:11.480-0400] {scheduler_job_runner.py:2241} INFO - Marked 1 SchedulerJob instances as failed
+[2025-10-15T13:38:11.536-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T13:43:11.586-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T13:48:11.632-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T13:53:11.687-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T13:58:11.512-0400] {base.py:220} INFO - checking for stale bundle versions locally
+[2025-10-15T13:58:11.519-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+[2025-10-15T13:58:11.737-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T14:03:11.787-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15T14:08:11.841-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs

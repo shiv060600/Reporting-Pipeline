@@ -48,15 +48,6 @@ It will upload mapping files, run combined sales report and then run report thre
 
 """
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("logs_and_tests/daily_auto_run_upload_mappers_combined_sales_report_and_report_three_combined.log", mode='w'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-
 logger = logging.getLogger(__name__)
 
 

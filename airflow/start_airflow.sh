@@ -23,6 +23,10 @@ sleep 3
 echo "Starting Airflow Scheduler..."
 nohup airflow scheduler > logs/scheduler.log 2>&1 &
 
+# Start DAG processor in background
+echo "Starting Airflow DAG Processor..."
+nohup airflow dag-processor > logs/dag_processor.log 2>&1 &
+
 echo ""
 echo "Airflow is starting up!"
 echo "Web UI: http://localhost:8080"
@@ -32,5 +36,6 @@ echo ""
 echo "Logs:"
 echo "  API Server: tail -f logs/api_server.log"
 echo "  Scheduler: tail -f logs/scheduler.log"
+echo "  DAG Processor: tail -f logs/dag_processor.log"
 echo ""
 echo "To stop Airflow, run: ./stop_airflow.sh"

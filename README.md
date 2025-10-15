@@ -47,8 +47,7 @@ cd /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow
 
 Once Airflow is running, open your browser:
 - **URL**: http://localhost:8080
-- **Username**: admin
-- **Password**: admin
+- Enter the password
 
 ## Project Structure
 
