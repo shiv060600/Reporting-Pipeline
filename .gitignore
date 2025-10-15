@@ -12,3 +12,4 @@ airflow/airflow_env_linux
 airflow/airflow.cfg
 airflow/airflow.db
 airflow/*.ch
+airflow/logs/*
