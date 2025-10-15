@@ -63,7 +63,7 @@ logger = logging.getLogger(__name__)
 if __name__ == "__main__":
     params = urllib.parse.quote_plus(SSMS_CONN_STRING)
     engine = sqlalchemy.create_engine(f"mssql+pyodbc:///?odbc_connect={params}",connect_args={'timeout':1800,'connect_timeout':120},pool_recycle=3600)
-    run name mapping and category mapping upload
+    #run name mapping and category mapping upload
     logger.info("Starting daily upload of name mapping upload")
     name_mapping_upload()
     logger.info("finished name_mapping_upload")

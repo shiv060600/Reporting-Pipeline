@@ -1,0 +1,95 @@
+[2025-10-15T11:03:42.522-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:42.524-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-10-15T11:03:42.708-0400] {api_server_command.py:119} INFO - Running the uvicorn with:
+Apps: all
+Workers: 4
+Host: 0.0.0.0:8080
+Timeout: 120
+Logfiles: -
+=================================================================
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Started parent process [4540]
+INFO:     Waiting for child process [4545]
+INFO:     Child process [4545] died
+[2025-10-15T11:03:50.571-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:50.571-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:50.574-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:50.574-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+[2025-10-15T11:03:51.662-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:51.665-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+INFO:     Started server process [4547]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [4546]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:54826 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /static/assets/index-CHslVY9k.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54826 - "GET /ui/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /ui/auth/menus HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /api/v2/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54834 - "GET /api/v2/plugins HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /api/v2/importErrors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54834 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T15%3A03%3A56.118Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /static/pin_32.png HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54834 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-14T15%3A03%3A56.118Z&timestamp_lte=2025-10-15T15%3A03%3A56.118Z HTTP/1.1" 200 OK
+[2025-10-15T11:03:56.855-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:56.857-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+INFO:     Started server process [4548]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+INFO:     127.0.0.1:54834 - "GET /api/v2/dagTags?limit=10&offset=0&order_by=name&tag_name_pattern= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /api/v2/dags?limit=50&offset=0&order_by=dag_display_name HTTP/1.1" 200 OK
+INFO:     Started server process [4565]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51548 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-14T15%3A04%3A00.366Z&timestamp_lte=2025-10-15T15%3A04%3A00.366Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T15%3A04%3A00.366Z HTTP/1.1" 200 OK

@@ -1,0 +1,15 @@
+[2025-10-15T11:03:47.316-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-15T11:03:47.319-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-10-15T11:03:50.780-0400] {scheduler_job_runner.py:1022} INFO - Starting the scheduler
+[2025-10-15T11:03:50.802-0400] {executor_loader.py:269} INFO - Loaded executor: :LocalExecutor:
+[2025-10-15T11:03:50.835-0400] {scheduler_job_runner.py:2218} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-10-15 11:03:50 -0400] [4573] [INFO] Starting gunicorn 23.0.0
+[2025-10-15 11:03:50 -0400] [4573] [INFO] Listening at: http://[::]:8793 (4573)
+[2025-10-15 11:03:50 -0400] [4573] [INFO] Using worker: sync
+[2025-10-15 11:03:50 -0400] [4574] [INFO] Booting worker with pid: 4574
+[2025-10-15 11:03:50 -0400] [4575] [INFO] Booting worker with pid: 4575

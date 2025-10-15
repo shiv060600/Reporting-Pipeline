@@ -1,135 +1,83 @@
 # Sales Reporting Pipeline
 
-A Python-based system for processing and analyzing sales data from multiple sources (Ingram and SAGE) to generate comprehensive sales reports with advanced mapping and categorization capabilities.
+An automated reporting pipeline that selects data from MSSQL databases, transforms it, and generates multiple sales reports. The pipeline runs on Apache Airflow for scheduling and orchestration.
 
-## Overview
+## What It Does
 
-This system combines sales data from Ingram and SAGE databases to create detailed sales reports. It processes historical sales data, combines it from multiple sources, and generates various reports including YTD analysis, 12-month rolling analysis, and historical trends. The system includes advanced mapping functionality for customer names and sales categories to ensure data consistency and accurate reporting.
+This pipeline pulls sales data from multiple sources, transforms and combines the data, then generates comprehensive sales reports. The system handles customer name mapping, sales categorization, and produces various analytical reports including YTD analysis, rolling trends, and historical comparisons.
 
-## Key Features
+## Tech Stack
 
-- Processes sales data from both Ingram and SAGE sources
-- Handles customer data with advanced name mapping system using master mapping tables
-- Advanced mapping system for customer names and sales categories
-- Monthly sales upload functionality with automatic categorization
-- Generates comprehensive sales reports including:
-  - Year-to-Date (YTD) analysis
-  - 12-month rolling analysis
-  - Historical trends (3 years)
-  - Customer-specific reporting
-  - Title/ISBN level reporting
+- **Windows Environment**: Python 3.13
+- **WSL Ubuntu Environment**: Python 3.12.3 + Apache Airflow 3.0.6
+- **Database**: Microsoft SQL Server (MSSQL)
+- **Orchestration**: Apache Airflow (running on WSL Ubuntu)
+- **Key Libraries**: pandas, polars, sqlalchemy, pyodbc, xlwings
 
-## System Architecture
+## Starting and Stopping Airflow
 
-### Core Processing Components
+Airflow runs on WSL Ubuntu and is controlled via startup scripts.
 
-#### Main Processing Script (`main.py`)
-- Fetches sales data from both Ingram and SAGE databases
-- Processes and combines sales data
-- Generates various sales reports
-- Handles data aggregation and analysis
+### Start Airflow
 
-#### Ingram Sales Processing (`create_ing_sales.py`)
-- Processes historical Ingram sales data from Excel files
-- Cleans and transforms the data
-- Creates SQL Server table with processed data
+```bash
+# From Windows Command Prompt or PowerShell
+wsl -d Ubuntu
 
-### Mapping and Categorization System
+# Navigate to the airflow directory
+cd /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow
 
-#### Master Name Mapping (`upload_master_name_mapping.py`)
-- Uploads customer name mapping data from Excel to SQL Server
-- Maintains `MASTER_INGRAM_NAME_MAPPING` table
-- Ensures consistent customer identification across data sources
-- Handles customer name standardization and deduplication
+# Run the startup script
+./start_airflow.sh
+```
 
-#### Sales Category Mapping (`upload_master_sales_category.py`)
-- Manages sales category classifications for both Ingram and SAGE customers
-- Uploads category data to `INGRAM_MASTER_CATEGORIES` and `SAGE_MASTER_CATEGORIES` tables
-- Provides standardized sales category mapping across all data sources
-- Supports hierarchical account structures (SL Account Number to HQ Account Number mapping)
+The script will start both the web server and scheduler in the background.
 
-#### Monthly Sales Upload (`monthly_sales_upload.py`)
-- Processes monthly Ingram sales data with automatic categorization
-- Applies master sales category mappings to new sales data
-- Integrates with book mapping system for title standardization
-- Handles data cleaning and transformation for reporting consistency
+### Stop Airflow
 
-### Configuration (`helpers/paths.py`)
-- Manages file paths and connection strings
-- Centralizes configuration settings
-- Handles database connection parameters
+```bash
+# From WSL Ubuntu
+cd /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow
 
-## Data Processing Flow
+# Run the stop script
+./stop_airflow.sh
+```
 
-### 1. Data Collection and Mapping
-- **Customer Name Mapping**: Standardizes customer names across Ingram and SAGE sources
-- **Sales Category Mapping**: Applies master sales categories to all customer accounts
-- **Book Title Mapping**: Standardizes book titles using ISBN-based mapping
+### Access the Web Interface
 
-### 2. Data Processing
-- Maps Ingram customer names to SAGE customer names using master mapping tables
-- Standardizes ISBN formats
-- Combines data from both sources with proper categorization
-- Groups and aggregates sales data by standardized categories
+Once Airflow is running, open your browser:
+- **URL**: http://localhost:8080
+- **Username**: admin
+- **Password**: admin
 
-### 3. Report Generation
-- Calculates YTD values
-- Generates 12-month rolling analysis
-- Creates historical trend reports
-- Outputs consolidated data to Excel with proper categorization
+## Project Structure
 
-## Technical Stack
+```
+REPORTING_PIPELINE/
+├── airflow/                 # Airflow home directory
+│   ├── dags/               # DAG files for workflow orchestration
+│   └── airflow_env_linux/  # Python virtual environment (Linux)
+├── src/
+│   ├── pipelines/          # Report generation scripts
+│   ├── database_uploads/   # Data upload scripts
+│   └── helpers/            # Utility functions and configuration
+└── requirements.txt        # Python dependencies
+```
 
-### Core Technologies
-- **Python 3.x**: Primary programming language
-- **SQL Server**: Database for data storage and retrieval
-- **Excel Integration**: Uses xlwings for Excel file processing
+## Reports Generated
 
-### Key Python Libraries
-- **pandas**: Data manipulation and analysis
-- **numpy**: Numerical computing
-- **sqlalchemy**: Database ORM and connection management
-- **xlwings**: Excel automation and file processing
-- **pyodbc**: SQL Server connectivity
-- **rapidfuzz**: Fuzzy string matching for data cleaning
-- **openpyxl**: Excel file reading and writing
-- **polars**: High-performance data processing
-- **pyarrow**: Arrow format data handling
-
-### Database Schema
-- **MASTER_INGRAM_NAME_MAPPING**: Customer name standardization
-- **INGRAM_MASTER_CATEGORIES**: Ingram customer sales categories
-- **SAGE_MASTER_CATEGORIES**: SAGE customer sales categories
-- **Sales Data Tables**: Historical and current sales data storage
-
-## Data Quality and Consistency
-
-### Mapping System Benefits
-- **Standardized Customer Names**: Eliminates duplicates and variations in customer naming
-- **Consistent Sales Categories**: Ensures all sales are properly categorized for reporting
-- **Title Standardization**: Uses ISBN-based mapping to standardize book titles
-- **Data Deduplication**: Removes duplicate records while maintaining source identification
-
-### Error Handling and Logging
-- Comprehensive logging system tracks all data processing steps
-- Error handling for database connections and file operations
-- Data validation and quality checks throughout the pipeline
-- Null value handling and data cleaning procedures
-
-## Output and Reporting
-
-The system generates Excel reports containing:
-- Combined sales data from both sources with proper categorization
-- YTD analysis with standardized customer and category groupings
+The pipeline generates multiple reports including:
+- Combined sales reports from multiple sources
+- Year-to-Date (YTD) analysis
 - 12-month rolling analysis
-- Historical trends with consistent categorization
-- Customer-specific reports with mapped names and categories
-- Title/ISBN level analysis with standardized titles
+- Historical trends
+- Customer-specific reports
+- Title/ISBN level reports
 
-## System Notes
+## How It Works
 
-- The system uses master mapping tables to standardize customer names between Ingram and SAGE sources
-- Data is aggregated to remove duplicates while maintaining source identification
-- Reports are generated on a monthly basis with automatic categorization
-- Historical data is maintained for 3 years with proper mapping applied
-- The mapping system ensures data quality and reporting accuracy across all sources 
+1. **Data Selection**: Pulls sales data from MSSQL databases
+2. **Data Transformation**: Standardizes customer names, categories, and ISBNs
+3. **Data Combination**: Merges data from multiple sources
+4. **Report Generation**: Creates Excel reports with analysis
+5. **Scheduling**: Airflow manages when and how often reports run

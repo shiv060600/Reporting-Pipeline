@@ -20,7 +20,7 @@ def main():
     try:
         app = xw.App(visible = False)
         logger.info(f"Opening Excel file: {MASTER_SALES_CATEGORIES}")
-        wb = app.books.open(MASTER_SALES_CATEGORIES)
+        wb = app.books.open(MASTER_SALES_CATEGORIES,update_links= False)
         
         logger.info("Accessing INGRAM_CUSTOMERS sheet")
         ws = wb.sheets["INGRAM_CUSTOMERS"]
@@ -51,7 +51,7 @@ def main():
 
     try:
         app1 = xw.App(visible = False)
-        wb = app1.books.open(MASTER_SALES_CATEGORIES)
+        wb = app1.books.open(MASTER_SALES_CATEGORIES, update_links = False)
         ws = wb.sheets['SAGE_CUSTOMERS']
         last_row = ws.range('A1').end('down').row
         logger.info("Loading SAGE categories")
