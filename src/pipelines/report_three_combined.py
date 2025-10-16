@@ -93,15 +93,8 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         right_on = 'BILLTO',
         how = 'left'
     ).with_columns(
-        (pl.col("NETAMT") * pl.col("MUL_RATIO").fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
+        abs(pl.col("NETAMT") * pl.col("MUL_RATIO").fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
-
-    far_corner:pl.DataFrame = ingram_sales_df.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-    )
-
-    logger.info('Far corner after muljoin')
-    logger.info(far_corner)
 
 
     sage_sales_df = sage_sales_df.join(
@@ -110,9 +103,8 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         right_on = 'BILLTO',
         how = 'left'
     ).with_columns(
-        (pl.col('NETAMT') * pl.col('MUL_RATIO').fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
+        abs(pl.col('NETAMT') * pl.col('MUL_RATIO').fill_null(1.0)).cast(pl.Float64).alias("TARGET_NETAMT")
     )
-
 
     #Drop MUL_RATIO after chaining operations
     ingram_sales_df = ingram_sales_df.drop(['MUL_RATIO'])
@@ -138,31 +130,13 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         pl.col("TARGET_NETAMT").sum().alias("TARGET_NETAMT")
     ]
 
-    far_corner = ingram_sales_df.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-    )
-
-    logger.info('Far corner dropping ISBN and TITLE and before grouping')
-    logger.info(far_corner)
-
 
     ingram_base_df = ingram_sales_df[['HQ_NUMBER','NAMECUST','TUTTLE_SALES_CATEGORY','2025_Target']].unique()
 
-    far_corner = ingram_base_df.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-    )
 
-    logger.info('Far corner in the base df')
-    logger.info(far_corner)
+
 
     ingram_combined_df = ingram_sales_df.group_by(ingram_grouping_keys).agg(ingram_agg_expressions)
-
-    far_corner = ingram_combined_df.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-    )
-
-    logger.info('Far corner in combined(calculation) df')
-    logger.info(far_corner)
 
     #YTD logic Ingram
     ingram_ytd_values = ingram_combined_df.filter(
@@ -171,13 +145,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
             pl.col('NETAMT').sum().alias('YTD_ACTUAL'),
             pl.col('TARGET_NETAMT').sum().alias('YTD_TARGET')
         )
-    
-    far_corner = ingram_ytd_values.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-    )
-
-    logger.info('Far corner after ytd')
-    logger.info(far_corner)
     
 
     
@@ -188,12 +155,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         how = 'left'
     )
 
-    far_corner = ingram_report_df.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-    )
-
-    logger.info('Far corner after joining ytd values on base')
-    logger.info(far_corner)
 
     #Monthly columns target and actual logic Ingram
     year_months = []
@@ -229,12 +190,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
             pl.col('TARGET_NETAMT').sum().alias(target_column_name)
         ])
 
-        far_corner = month_values.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-        )
-
-        logger.info('Far corner in month values')
-        logger.info(far_corner)
 
         ingram_report_df = ingram_report_df.join(
             month_values,
@@ -242,12 +197,6 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
             how='left'
         )
 
-        far_corner = ingram_report_df.filter(
-        pl.col('NAMECUST').str.contains('FAR CORNER')
-        )
-
-        logger.info(' far corner in ingram_report df after joining month values to ingram report df')
-        logger.info(far_corner)
 
         ingram_report_df = ingram_report_df.with_columns(
             pl.col(actual_column_name).fill_null(0),
@@ -518,7 +467,10 @@ def report_three_combined(ingram_sales_df: pl.DataFrame,sage_sales_df: pl.DataFr
         logger.info(f"sqlalchemy error occured {sqle}")
     except Exception as e:
         logger.info(f"unexpected exception occured {e}")
+
+    customer_city_state = customer_city_state.drop_duplicates(subset=['C'],keep='first')
     
+
     #need to convert to pandas for sql upload
     report_df = report_df.to_pandas()
 

@@ -13,3 +13,5 @@ airflow/airflow.cfg
 airflow/airflow.db
 airflow/*.ch
 airflow/logs/*
+test/*
+pytest.ini

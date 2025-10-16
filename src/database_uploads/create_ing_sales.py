@@ -27,7 +27,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("logs_and_tests/create_ing_sales_log.txt"),
+        logging.FileHandler(r'H:\Upgrading_Database_Reporting_Systems\REPORTING_PIPELINE\src\logs_and_tests\manual_repalce_sales.log'),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -100,8 +100,10 @@ ing_sales_df = ing_sales_df.drop(
     errors='ignore' 
 )
 
-ing_sales_df["YEAR"] = ing_sales_df["Date"].str[6:]
-ing_sales_df["MONTH"] = ing_sales_df["Date"].str[0:2].str.replace('0','')
+ing_sales_df["Date"] = pd.to_datetime(ing_sales_df["Date"], format='%m/%d/%Y', errors='coerce')
+
+ing_sales_df["YEAR"] = ing_sales_df['Date'].dt.year
+ing_sales_df["MONTH"] = ing_sales_df["Date"].dt.month
 
 ing_sales_df = ing_sales_df.rename(columns={
     'Net Sold Units': 'NETUNITS',

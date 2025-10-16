@@ -1,11 +1,11 @@
-[2025-10-15T13:28:06.819-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T13:28:06.823-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:28.583-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:28.586-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
   ____________       _____________
  ____    |__( )_________  __/__  /________      __
 ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
 ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
-[2025-10-15T13:28:06.968-0400] {api_server_command.py:119} INFO - Running the uvicorn with:
+[2025-10-16T08:32:28.731-0400] {api_server_command.py:119} INFO - Running the uvicorn with:
 Apps: all
 Workers: 4
 Host: 0.0.0.0:8080
@@ -13,18 +13,15 @@ Timeout: 120
 Logfiles: -
 =================================================================
 INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
-INFO:     Started parent process [5696]
-INFO:     Waiting for child process [5702]
-INFO:     Child process [5702] died
-[2025-10-15T13:28:14.746-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T13:28:14.748-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T13:28:14.850-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T13:28:14.855-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-[2025-10-15T13:28:15.072-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T13:28:15.074-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+INFO:     Started parent process [8453]
+INFO:     Waiting for child process [8459]
+INFO:     Child process [8459] died
+[2025-10-16T08:32:37.266-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:37.269-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:37.535-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:37.537-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:37.539-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:37.541-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
@@ -39,30 +36,6 @@ INFO:     Child process [5702] died
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-INFO:     Started server process [5705]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Started server process [5704]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Started server process [5703]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-[2025-10-15T13:28:19.127-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
-[2025-10-15T13:28:19.128-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
@@ -71,349 +44,1233 @@ INFO:     Application startup complete.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
 /mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
-INFO:     Started server process [5709]
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+INFO:     Started server process [8461]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:34896 - "GET /dags HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/config HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/auth/menus HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/version HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /api/v2/plugins HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/importErrors HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dagTags?limit=10&offset=0&order_by=name&tag_name_pattern= HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /api/v2/dags?limit=50&offset=0&order_by=dag_display_name HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/next_run_assets/asset_alias_example_alias_consumer_with_no_taskflow HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /ui/next_run_assets/asset_alias_example_alias_consumer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /ui/next_run_assets/asset_s3_bucket_consumer_with_no_taskflow HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/next_run_assets/asset_s3_bucket_consumer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/next_run_assets/asset_consumes_unknown_never_scheduled HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /ui/next_run_assets/asset_consumes_1_and_2 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/next_run_assets/asset_consumes_1 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34934 - "GET /ui/next_run_assets/asset_consumes_1_never_scheduled HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /ui/next_run_assets/consume_1_and_2_with_asset_expressions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/next_run_assets/consume_1_or_2_with_asset_expressions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /ui/next_run_assets/consumes_asset_decorator HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/next_run_assets/example_asset_with_watchers HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/next_run_assets/consume_1_or_both_2_and_3_with_asset_expressions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-14T17%3A28%3A25.931Z&timestamp_lte=2025-10-15T17%3A28%3A25.931Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A28%3A25.931Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /api/v2/dags?limit=50&offset=0&dag_display_name_pattern=dail&order_by=dag_display_name HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0&dag_display_name_pattern=dail HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags?limit=50&offset=0&dag_display_name_pattern=daily&order_by=dag_display_name HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0&dag_display_name_pattern=daily HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /api/v2/dags/~/dagRuns?limit=50&offset=0&order_by=-run_after HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34930 - "GET /api/v2/dags/~/dagRuns/~/taskInstances?limit=50&offset=0&order_by=-start_date HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/grid/runs/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/backfills?dag_id=daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/assets/events?limit=10&order_by=-timestamp&source_dag_id=daily_mapping_upload&timestamp_gte=2025-10-14T17%3A28%3A45.088Z&timestamp_lte=2025-10-15T17%3A28%3A45.088Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/dagWarnings?dag_id=daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /api/v2/dags/daily_mapping_upload/dagRuns/~/taskInstances?run_after_gte=2025-10-14T17%3A28%3A45.088Z&run_after_lte=2025-10-15T17%3A28%3A45.088Z&state=failed&order_by=-run_after HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34934 - "GET /api/v2/dags/daily_mapping_upload/dagRuns?limit=10&run_after_gte=2025-10-14T17%3A28%3A45.088Z&run_after_lte=2025-10-15T17%3A28%3A45.088Z&state=failed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34906 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
-[2025-10-15T13:28:45.241-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34930 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&dag_ids=daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/grid/structure/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
-[2025-10-15T13:28:48.552-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34922 - "GET /api/v2/dagSources/daily_mapping_upload?version_number=1 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/dags/daily_mapping_upload/dagVersions/1 HTTP/1.1" 200 OK
-[2025-10-15T13:28:48.554-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags/daily_mapping_upload/dagVersions?order_by=-version_number HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "PATCH /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
-[2025-10-15T13:28:55.849-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34922 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
-[2025-10-15T13:28:55.948-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34936 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&dag_ids=daily_mapping_upload HTTP/1.1" 200 OK
-2025-10-15 13:28:57 [debug    ] Starting task instance run     hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c unixname=administrator
-2025-10-15 13:28:57 [debug    ] Retrieved task instance details dag_id=daily_mapping_upload state=queued task_id=run_daily_pipeline ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:28:57 [info     ] Task started                   hostname=TUTPUB5.tuttlepub.com previous_state=queued ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:28:57 [info     ] Task instance state updated    rows_affected=1 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:52314 - "PATCH /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/run HTTP/1.1" 200 OK
-2025-10-15 13:28:57 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:28:57 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:28:57 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:52314 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:28:57 [info     ] Updating RenderedTaskInstanceFields field_count=3 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:28:57 [debug    ] RenderedTaskInstanceFields updated successfully ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:52314 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/rtif HTTP/1.1" 201 Created
-INFO:     127.0.0.1:34936 - "PATCH /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
-[2025-10-15T13:28:57.370-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34922 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
-[2025-10-15T13:28:57.408-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34896 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&dag_ids=daily_mapping_upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/assets/events?limit=10&order_by=-timestamp&source_dag_id=daily_mapping_upload&timestamp_gte=2025-10-14T17%3A28%3A58.528Z&timestamp_lte=2025-10-15T17%3A28%3A58.528Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/dags/daily_mapping_upload/dagRuns?limit=10&run_after_gte=2025-10-14T17%3A28%3A58.528Z&run_after_lte=2025-10-15T17%3A28%3A58.528Z&state=failed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags/daily_mapping_upload/dagRuns/~/taskInstances?run_after_gte=2025-10-14T17%3A28%3A58.528Z&run_after_lte=2025-10-15T17%3A28%3A58.528Z&state=failed&order_by=-run_after HTTP/1.1" 200 OK
-2025-10-15 13:29:02 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:03 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:03 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:39706 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:07 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:07 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:07 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:39706 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:34922 - "GET /api/v2/assets/events?limit=10&order_by=-timestamp&source_dag_id=daily_mapping_upload&timestamp_gte=2025-10-14T17%3A29%3A08.465Z&timestamp_lte=2025-10-15T17%3A29%3A08.465Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags/daily_mapping_upload/dagRuns/~/taskInstances?run_after_gte=2025-10-14T17%3A29%3A08.465Z&run_after_lte=2025-10-15T17%3A29%3A08.465Z&state=failed&order_by=-run_after HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/dags/daily_mapping_upload/dagRuns?limit=10&run_after_gte=2025-10-14T17%3A29%3A08.465Z&run_after_lte=2025-10-15T17%3A29%3A08.465Z&state=failed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-14T17%3A29%3A09.872Z&timestamp_lte=2025-10-15T17%3A29%3A09.872Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A29%3A09.872Z HTTP/1.1" 200 OK
-2025-10-15 13:29:12 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:12 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:12 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:39708 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A29%3A09.872Z HTTP/1.1" 200 OK
-[2025-10-15T13:29:16.114-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34936 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags?limit=50&offset=0&order_by=dag_display_name HTTP/1.1" 200 OK
-2025-10-15 13:29:19 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:19 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:19 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:50904 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:24 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:24 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:24 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:50916 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:29 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:29 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:29 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:58416 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:34 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:34 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:34 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:58422 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:42 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:42 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:42 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:43598 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:47 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:47 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:47 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:47632 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:52 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:52 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:52 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:47644 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:29:58 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:58 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:29:58 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:48144 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-2025-10-15 13:30:04 [debug    ] Processing heartbeat           hostname=TUTPUB5.tuttlepub.com pid=5747 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:30:04 [debug    ] Retrieved current task state   current_hostname=TUTPUB5.tuttlepub.com current_pid=5747 state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:30:04 [debug    ] Heartbeat updated              state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:48154 - "PUT /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/heartbeat HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:48154 - "POST /execution/xcoms/daily_mapping_upload/scheduled__2025-10-15T01%3A00%3A00%2B00%3A00/run_daily_pipeline/return_value HTTP/1.1" 201 Created
-2025-10-15 13:30:04 [debug    ] Updating task instance state   new_state=success ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-2025-10-15 13:30:04 [debug    ] Retrieved current task instance state max_tries=0 previous_state=running ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c try_number=1
-2025-10-15 13:30:04 [info     ] Task instance state updated    new_state=success rows_affected=1 ti_id=0199e8ea-f33e-7044-8202-bd7fe5d7230c
-INFO:     127.0.0.1:48154 - "PATCH /execution/task-instances/0199e8ea-f33e-7044-8202-bd7fe5d7230c/state HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:34936 - "GET /api/v2/dags?limit=50&offset=0&last_dag_run_state=running&order_by=dag_display_name HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0&last_dag_run_state=running HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/dags?limit=50&offset=0&last_dag_run_state=success&order_by=dag_display_name HTTP/1.1" 200 OK
-[2025-10-15T13:30:24.924-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
-INFO:     127.0.0.1:34936 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=14&limit=50&offset=0&last_dag_run_state=success HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-14T17%3A30%3A26.973Z&timestamp_lte=2025-10-15T17%3A30%3A26.973Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A26.973Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A26.973Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-14T17%3A30%3A31.615Z&timestamp_lte=2025-10-15T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34896 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34922 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34936 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53176 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53170 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53190 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39942 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39928 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39950 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39928 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-14T17%3A30%3A31.615Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39950 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39942 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
+INFO:     Started server process [8462]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [8460]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[2025-10-16T08:32:41.599-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.filesystem.FSHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+[2025-10-16T08:32:41.601-0400] {providers_manager.py:953} INFO - The hook_class 'airflow.providers.standard.hooks.package_index.PackageIndexHook' is not fully initialized (UI widgets will be missing), because the 'flask_appbuilder' package is not installed, however it is not required for Airflow components to work
+INFO:     127.0.0.1:34348 - "GET /dags HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34348 - "GET /static/assets/index-CHslVY9k.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:34348 - "GET /ui/config HTTP/1.1" 200 OK
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/execution_api/routes/__init__.py:23 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+INFO:     127.0.0.1:34348 - "GET /ui/auth/menus HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /api/v2/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "GET /api/v2/plugins HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /api/v2/importErrors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34348 - "GET /api/v2/dagTags?limit=10&offset=0&order_by=name&tag_name_pattern= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34348 - "GET /static/pin_32.png HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:34356 - "GET /api/v2/dags?limit=50&offset=0&order_by=dag_display_name HTTP/1.1" 200 OK
+[2025-10-16T08:32:42.297-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:34362 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&limit=50&offset=0 HTTP/1.1" 200 OK
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/assets.py:144 PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+INFO:     127.0.0.1:34356 - "GET /ui/next_run_assets/asset_alias_example_alias_consumer_with_no_taskflow HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /ui/next_run_assets/asset_alias_example_alias_consumer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "GET /ui/next_run_assets/asset_s3_bucket_consumer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34364 - "GET /ui/next_run_assets/asset_consumes_1_never_scheduled HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34370 - "GET /ui/next_run_assets/asset_consumes_unknown_never_scheduled HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /ui/next_run_assets/asset_s3_bucket_consumer_with_no_taskflow HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34348 - "GET /ui/next_run_assets/asset_consumes_1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "GET /ui/next_run_assets/consume_1_and_2_with_asset_expressions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34348 - "GET /ui/next_run_assets/consumes_asset_decorator HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34370 - "GET /ui/next_run_assets/consume_1_or_both_2_and_3_with_asset_expressions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /ui/next_run_assets/example_asset_with_watchers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34364 - "GET /ui/next_run_assets/consume_1_or_2_with_asset_expressions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34368 - "GET /ui/next_run_assets/asset_consumes_1_and_2 HTTP/1.1" 200 OK
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/routes/public/__init__.py:37 DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+INFO:     Started server process [8466]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:34364 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-15T12%3A33%3A10.035Z&timestamp_lte=2025-10-16T12%3A33%3A10.035Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34368 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-15T12%3A33%3A10.035Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34370 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34370 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-15T12%3A33%3A10.035Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34362 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34370 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53198 - "GET /ui/backfills?dag_id=example_params_trigger_ui HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53232 - "GET /ui/grid/runs/example_params_trigger_ui?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53210 - "GET /ui/grid/structure/example_params_trigger_ui?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53192 - "GET /static/assets/FailedLogs-DKJrmJHc.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53232 - "GET /api/v2/assets/events?limit=10&order_by=-timestamp&source_dag_id=example_params_trigger_ui&timestamp_gte=2025-10-15T12%3A34%3A58.776Z&timestamp_lte=2025-10-16T12%3A34%3A58.776Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53198 - "GET /api/v2/dags/example_params_trigger_ui/dagRuns?limit=10&run_after_gte=2025-10-15T12%3A34%3A58.776Z&run_after_lte=2025-10-16T12%3A34%3A58.776Z&state=failed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53210 - "GET /api/v2/dags/example_params_trigger_ui HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53198 - "GET /ui/grid/latest_run/example_params_trigger_ui HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53232 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&dag_ids=example_params_trigger_ui HTTP/1.1" 200 OK
+[2025-10-16T08:34:59.291-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:53248 - "GET /api/v2/dags/example_params_trigger_ui/dagRuns/~/taskInstances?run_after_gte=2025-10-15T12%3A34%3A58.776Z&run_after_lte=2025-10-16T12%3A34%3A58.776Z&state=failed&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53220 - "GET /api/v2/dags/example_params_trigger_ui/details HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:53192 - "GET /api/v2/dagWarnings?dag_id=example_params_trigger_ui HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    |     return field.serialize(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    |     return self._type_adapter.dump_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    |     return self.serializer.to_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    |     return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    |     bundle = self.get_bundle(name, version)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    |     raise ValueError(f"Requested bundle '{name}' is not configured.")
+    | ValueError: Requested bundle 'example_dags' is not configured.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    return field.serialize(
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    return self._type_adapter.dump_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    return self.serializer.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    bundle = self.get_bundle(name, version)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    raise ValueError(f"Requested bundle '{name}' is not configured.")
+ValueError: Requested bundle 'example_dags' is not configured.
+[2025-10-16T08:34:59.890-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:53192 - "GET /api/v2/dags/example_params_trigger_ui/details HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    |     return field.serialize(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    |     return self._type_adapter.dump_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    |     return self.serializer.to_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    |     return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    |     bundle = self.get_bundle(name, version)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    |     raise ValueError(f"Requested bundle '{name}' is not configured.")
+    | ValueError: Requested bundle 'example_dags' is not configured.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    return field.serialize(
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    return self._type_adapter.dump_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    return self.serializer.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    bundle = self.get_bundle(name, version)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    raise ValueError(f"Requested bundle '{name}' is not configured.")
+ValueError: Requested bundle 'example_dags' is not configured.
+INFO:     127.0.0.1:53248 - "GET /ui/grid/latest_run/example_params_trigger_ui HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53248 - "GET /ui/grid/latest_run/example_params_trigger_ui HTTP/1.1" 200 OK
+[2025-10-16T08:35:06.287-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:53248 - "GET /api/v2/dags/example_params_trigger_ui/dagVersions?order_by=-version_number HTTP/1.1" 500 Internal Server Error
+[2025-10-16T08:35:06.299-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:53198 - "GET /api/v2/dags/example_params_trigger_ui/details HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:53232 - "GET /ui/structure/structure_data?dag_id=example_params_trigger_ui&external_dependencies=false HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    |     return field.serialize(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    |     return self._type_adapter.dump_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    |     return self.serializer.to_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    |     return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    |     bundle = self.get_bundle(name, version)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    |     raise ValueError(f"Requested bundle '{name}' is not configured.")
+    | ValueError: Requested bundle 'example_dags' is not configured.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    return field.serialize(
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    return self._type_adapter.dump_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    return self.serializer.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    bundle = self.get_bundle(name, version)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    raise ValueError(f"Requested bundle '{name}' is not configured.")
+ValueError: Requested bundle 'example_dags' is not configured.
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    |     return field.serialize(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    |     return self._type_adapter.dump_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    |     return self.serializer.to_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    |     return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    |     bundle = self.get_bundle(name, version)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    |     raise ValueError(f"Requested bundle '{name}' is not configured.")
+    | ValueError: Requested bundle 'example_dags' is not configured.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    return field.serialize(
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    return self._type_adapter.dump_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    return self.serializer.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    bundle = self.get_bundle(name, version)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    raise ValueError(f"Requested bundle '{name}' is not configured.")
+ValueError: Requested bundle 'example_dags' is not configured.
+[2025-10-16T08:35:06.850-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:53232 - "GET /api/v2/dags/example_params_trigger_ui/dagVersions?order_by=-version_number HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    |     return field.serialize(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    |     return self._type_adapter.dump_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    |     return self.serializer.to_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    |     return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    |     bundle = self.get_bundle(name, version)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    |     raise ValueError(f"Requested bundle '{name}' is not configured.")
+    | ValueError: Requested bundle 'example_dags' is not configured.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    return field.serialize(
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    return self._type_adapter.dump_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    return self.serializer.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    bundle = self.get_bundle(name, version)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    raise ValueError(f"Requested bundle '{name}' is not configured.")
+ValueError: Requested bundle 'example_dags' is not configured.
+[2025-10-16T08:35:06.921-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:53210 - "GET /api/v2/dags/example_params_trigger_ui/details HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    |     return field.serialize(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    |     return self._type_adapter.dump_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    |     return self.serializer.to_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    |     return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    |     bundle = self.get_bundle(name, version)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    |     raise ValueError(f"Requested bundle '{name}' is not configured.")
+    | ValueError: Requested bundle 'example_dags' is not configured.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/middleware.py", line 28, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 411, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/routing.py", line 257, in serialize_response
+    return field.serialize(
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/fastapi/_compat/v2.py", line 137, in serialize
+    return self._type_adapter.dump_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/pydantic/type_adapter.py", line 605, in dump_python
+    return self.serializer.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/api_fastapi/core_api/datamodels/dag_versions.py", line 43, in bundle_url
+    return DagBundlesManager().view_url(self.bundle_name, self.bundle_version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 168, in view_url
+    bundle = self.get_bundle(name, version)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/h/Upgrading_Database_Reporting_Systems/REPORTING_PIPELINE/airflow/airflow_env_linux/lib/python3.12/site-packages/airflow/dag_processing/bundles/manager.py", line 154, in get_bundle
+    raise ValueError(f"Requested bundle '{name}' is not configured.")
+ValueError: Requested bundle 'example_dags' is not configured.
+INFO:     127.0.0.1:54526 - "GET /ui/grid/latest_run/example_params_trigger_ui HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/assets/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/assets/events?limit=50&offset=0&order_by=-timestamp&asset_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /ui/dependencies?node_id=asset%3A4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dags/asset_consumes_1_and_2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dags/asset_consumes_1_never_scheduled HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/dags/asset_consumes_1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/dags/asset_produces_2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dags/asset_produces_1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dags/consume_1_and_2_with_asset_expressions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/dags/conditional_asset_and_time_based_timetable HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dags/consume_1_or_2_with_asset_expressions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/dags/consume_1_or_both_2_and_3_with_asset_expressions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /ui/backfills?dag_id=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET /api/v2/assets/events?limit=10&order_by=-timestamp&source_dag_id=daily_mapping_upload&timestamp_gte=2025-10-15T12%3A35%3A36.244Z&timestamp_lte=2025-10-16T12%3A35%3A36.244Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /ui/grid/runs/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/structure/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dagWarnings?dag_id=daily_mapping_upload HTTP/1.1" 200 OK
+[2025-10-16T08:35:36.337-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54526 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /api/v2/dags/daily_mapping_upload/dagRuns?limit=10&run_after_gte=2025-10-15T12%3A35%3A36.244Z&run_after_lte=2025-10-16T12%3A35%3A36.244Z&state=failed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54656 - "GET /api/v2/dags/daily_mapping_upload/dagRuns/~/taskInstances?run_after_gte=2025-10-15T12%3A35%3A36.244Z&run_after_lte=2025-10-16T12%3A35%3A36.244Z&state=failed&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /ui/grid/ti_summaries/daily_mapping_upload/scheduled__2025-10-16T01%3A00%3A00%2B00%3A00 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /ui/grid/ti_summaries/daily_mapping_upload/scheduled__2025-10-15T01%3A00%3A00%2B00%3A00 HTTP/1.1" 200 OK
+[2025-10-16T08:35:36.372-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&dag_ids=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET /ui/grid/runs/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /api/v2/dags/daily_mapping_upload/dagRuns?limit=10&run_after_gte=2025-10-15T12%3A35%3A36.244Z&run_after_lte=2025-10-16T12%3A35%3A36.244Z&state=failed HTTP/1.1" 200 OK
+[2025-10-16T08:35:36.431-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /ui/grid/structure/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+[2025-10-16T08:35:36.459-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+[2025-10-16T08:35:39.780-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+[2025-10-16T08:35:39.781-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/dagRuns?limit=50&offset=0&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/tasks HTTP/1.1" 200 OK
+[2025-10-16T08:35:42.228-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+[2025-10-16T08:35:42.229-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/dagRuns/~/taskInstances?task_id=run_daily_pipeline&limit=14&order_by=-run_after HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/backfills?limit=50&offset=0&dag_id=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /api/v2/eventLogs?limit=50&offset=0&order_by=-when&dag_id=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+[2025-10-16T08:35:51.789-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54526 - "GET /api/v2/dags/daily_mapping_upload/dagVersions/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /api/v2/dagSources/daily_mapping_upload?version_number=1 HTTP/1.1" 200 OK
+[2025-10-16T08:35:51.795-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/dagVersions?order_by=-version_number HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /dags/daily_mapping_upload/code HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/auth/menus HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /api/v2/plugins HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54656 - "GET /ui/backfills?dag_id=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dagSources/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /ui/grid/runs/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+[2025-10-16T08:36:38.247-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+[2025-10-16T08:36:38.249-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54646 - "GET /api/v2/dags/daily_mapping_upload/dagVersions?order_by=-version_number HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/dagWarnings?dag_id=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54656 - "GET /api/v2/dags/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54656 - "GET /ui/grid/ti_summaries/daily_mapping_upload/scheduled__2025-10-15T01%3A00%3A00%2B00%3A00 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /ui/grid/ti_summaries/daily_mapping_upload/scheduled__2025-10-16T01%3A00%3A00%2B00%3A00 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/grid/runs/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+[2025-10-16T08:36:38.406-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54668 - "GET /ui/dags/recent_dag_runs?dag_runs_limit=1&dag_ids=daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /ui/grid/structure/daily_mapping_upload?limit=10&order_by=-run_after HTTP/1.1" 200 OK
+[2025-10-16T08:36:38.415-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54674 - "GET /api/v2/dags/daily_mapping_upload/details HTTP/1.1" 200 OK
+[2025-10-16T08:36:38.456-0400] {manager.py:122} INFO - DAG bundles loaded: dags-folder
+INFO:     127.0.0.1:54674 - "GET /api/v2/dags/daily_mapping_upload/dagVersions/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/dagSources/daily_mapping_upload?version_number=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /ui/grid/latest_run/daily_mapping_upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54528 - "GET /api/v2/assets/events?limit=6&order_by=-timestamp&timestamp_gte=2025-10-15T12%3A36%3A43.712Z&timestamp_lte=2025-10-16T12%3A36%3A43.712Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "GET /api/v2/importErrors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-15T12%3A36%3A43.712Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54668 - "GET /ui/dashboard/dag_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54526 - "GET /api/v2/monitor/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /ui/dashboard/historical_metrics_data?start_date=2025-10-15T12%3A36%3A43.712Z HTTP/1.1" 200 OK

@@ -21,6 +21,6 @@ daily_dag = DAG(
 
 run_daily = BashOperator(
     task_id='run_daily_pipeline',
-    bash_command='powershell.exe -Command "cd H:\\Upgrading_Database_Reporting_Systems\\REPORTING_PIPELINE\\src; conda activate base; python run_daily.py"',
+    bash_command='powershell.exe -Command "cd H:\\Upgrading_Database_Reporting_Systems\\REPORTING_PIPELINE\\src; conda activate reportingenv; python run_daily.py"',
     dag=daily_dag,
 )

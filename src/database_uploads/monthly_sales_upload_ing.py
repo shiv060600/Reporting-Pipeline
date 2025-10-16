@@ -46,11 +46,6 @@ def monthly_sales_upload() -> None:
         logger.error(f"Failed to read monthly sales file: {e}")
         sys.exit(1)
     
-    list_months = monthly_sales_df['Date'].str[0:2].replace('0','').to_list()
-
-    if not all([month == prev_month for month in list_months]):
-        #correct sales are not in the
-        #implement email send
 
     try:
         ingram_master_sales_categories = pd.read_sql(
@@ -96,8 +91,11 @@ def monthly_sales_upload() -> None:
         errors='ignore' 
     )
 
-    monthly_sales_df["YEAR"] = monthly_sales_df["Date"].str[6:]
-    monthly_sales_df["MONTH"] = monthly_sales_df["Date"].str[0:2].str.replace('0','')
+
+    monthly_sales_df["Date"] = pd.to_datetime(monthly_sales_df["Date"], format='%m/%d/%Y', errors='coerce')
+
+    monthly_sales_df["YEAR"] = monthly_sales_df['Date'].dt.year
+    monthly_sales_df["MONTH"] = monthly_sales_df["Date"].dt.month
     
     
 
